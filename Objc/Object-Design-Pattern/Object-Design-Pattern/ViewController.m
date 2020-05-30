@@ -8,6 +8,11 @@
 
 #import "ViewController.h"
 
+//Show Cases
+
+//Factory Design Pattern
+#import "IDLFactoryDesignPatternShowCase.h"
+
 @interface ViewController ()
 
 @end
@@ -16,7 +21,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    IDLFactoryDesignPatternShowCase *factoryDesignPatternShowCase = [IDLFactoryDesignPatternShowCase new];
+    [factoryDesignPatternShowCase showCase];
+    
 }
 
 

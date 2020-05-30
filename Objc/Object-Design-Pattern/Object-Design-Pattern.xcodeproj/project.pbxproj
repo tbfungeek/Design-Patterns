@@ -14,6 +14,14 @@
 		E54E47F4248288F9006B39C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54E47F3248288F9006B39C9 /* Assets.xcassets */; };
 		E54E47F7248288F9006B39C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54E47F5248288F9006B39C9 /* LaunchScreen.storyboard */; };
 		E54E47FA248288F9006B39C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E54E47F9248288F9006B39C9 /* main.m */; };
+		E54E480924828B4A006B39C9 /* IDLHPPCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = E54E480824828B4A006B39C9 /* IDLHPPCDevice.m */; };
+		E54E480C24828BFE006B39C9 /* IDLIBMPCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = E54E480B24828BFE006B39C9 /* IDLIBMPCDevice.m */; };
+		E54E480F24828C56006B39C9 /* IDLApplePCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = E54E480E24828C56006B39C9 /* IDLApplePCDevice.m */; };
+		E54E481224828CE6006B39C9 /* IDLHPPCFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E54E481124828CE6006B39C9 /* IDLHPPCFactory.m */; };
+		E54E481524828E1B006B39C9 /* IDLBasePCFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E54E481424828E1B006B39C9 /* IDLBasePCFactory.m */; };
+		E54E481824828ED0006B39C9 /* IDLIBMPCFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E54E481724828ED0006B39C9 /* IDLIBMPCFactory.m */; };
+		E54E481B24828F39006B39C9 /* IDLApplePCFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E54E481A24828F39006B39C9 /* IDLApplePCFactory.m */; };
+		E54E481F24828FDF006B39C9 /* IDLFactoryDesignPatternShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E54E481E24828FDF006B39C9 /* IDLFactoryDesignPatternShowCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +37,25 @@
 		E54E47F6248288F9006B39C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E54E47F8248288F9006B39C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E54E47F9248288F9006B39C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E54E480524828A04006B39C9 /* IDLPCDeviceProtocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLPCDeviceProtocal.h; sourceTree = "<group>"; };
+		E54E480624828A35006B39C9 /* IDLPCFactoryProtocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLPCFactoryProtocal.h; sourceTree = "<group>"; };
+		E54E480724828B4A006B39C9 /* IDLHPPCDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLHPPCDevice.h; sourceTree = "<group>"; };
+		E54E480824828B4A006B39C9 /* IDLHPPCDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLHPPCDevice.m; sourceTree = "<group>"; };
+		E54E480A24828BFE006B39C9 /* IDLIBMPCDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLIBMPCDevice.h; sourceTree = "<group>"; };
+		E54E480B24828BFE006B39C9 /* IDLIBMPCDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLIBMPCDevice.m; sourceTree = "<group>"; };
+		E54E480D24828C56006B39C9 /* IDLApplePCDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLApplePCDevice.h; sourceTree = "<group>"; };
+		E54E480E24828C56006B39C9 /* IDLApplePCDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLApplePCDevice.m; sourceTree = "<group>"; };
+		E54E481024828CE6006B39C9 /* IDLHPPCFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLHPPCFactory.h; sourceTree = "<group>"; };
+		E54E481124828CE6006B39C9 /* IDLHPPCFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLHPPCFactory.m; sourceTree = "<group>"; };
+		E54E481324828E1B006B39C9 /* IDLBasePCFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLBasePCFactory.h; sourceTree = "<group>"; };
+		E54E481424828E1B006B39C9 /* IDLBasePCFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLBasePCFactory.m; sourceTree = "<group>"; };
+		E54E481624828ED0006B39C9 /* IDLIBMPCFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLIBMPCFactory.h; sourceTree = "<group>"; };
+		E54E481724828ED0006B39C9 /* IDLIBMPCFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLIBMPCFactory.m; sourceTree = "<group>"; };
+		E54E481924828F39006B39C9 /* IDLApplePCFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLApplePCFactory.h; sourceTree = "<group>"; };
+		E54E481A24828F39006B39C9 /* IDLApplePCFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLApplePCFactory.m; sourceTree = "<group>"; };
+		E54E481D24828FDF006B39C9 /* IDLFactoryDesignPatternShowCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLFactoryDesignPatternShowCase.h; sourceTree = "<group>"; };
+		E54E481E24828FDF006B39C9 /* IDLFactoryDesignPatternShowCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLFactoryDesignPatternShowCase.m; sourceTree = "<group>"; };
+		E54E48202482900B006B39C9 /* IDLDesignPatternShowCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLDesignPatternShowCase.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +88,8 @@
 		E54E47E6248288F3006B39C9 /* Object-Design-Pattern */ = {
 			isa = PBXGroup;
 			children = (
+				E54E48202482900B006B39C9 /* IDLDesignPatternShowCase.h */,
+				E54E48002482896C006B39C9 /* CreateDesignPatterns */,
 				E54E47E7248288F3006B39C9 /* AppDelegate.h */,
 				E54E47E8248288F3006B39C9 /* AppDelegate.m */,
 				E54E47EA248288F3006B39C9 /* SceneDelegate.h */,
@@ -74,6 +103,71 @@
 				E54E47F9248288F9006B39C9 /* main.m */,
 			);
 			path = "Object-Design-Pattern";
+			sourceTree = "<group>";
+		};
+		E54E48002482896C006B39C9 /* CreateDesignPatterns */ = {
+			isa = PBXGroup;
+			children = (
+				E54E480124828991006B39C9 /* Factory */,
+			);
+			path = CreateDesignPatterns;
+			sourceTree = "<group>";
+		};
+		E54E480124828991006B39C9 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				E54E481C24828FAF006B39C9 /* Client */,
+				E54E4804248289C5006B39C9 /* Factories */,
+				E54E4803248289AF006B39C9 /* Products */,
+				E54E4802248289A2006B39C9 /* Protocals */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		E54E4802248289A2006B39C9 /* Protocals */ = {
+			isa = PBXGroup;
+			children = (
+				E54E480524828A04006B39C9 /* IDLPCDeviceProtocal.h */,
+				E54E480624828A35006B39C9 /* IDLPCFactoryProtocal.h */,
+			);
+			path = Protocals;
+			sourceTree = "<group>";
+		};
+		E54E4803248289AF006B39C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E54E480724828B4A006B39C9 /* IDLHPPCDevice.h */,
+				E54E480824828B4A006B39C9 /* IDLHPPCDevice.m */,
+				E54E480A24828BFE006B39C9 /* IDLIBMPCDevice.h */,
+				E54E480B24828BFE006B39C9 /* IDLIBMPCDevice.m */,
+				E54E480D24828C56006B39C9 /* IDLApplePCDevice.h */,
+				E54E480E24828C56006B39C9 /* IDLApplePCDevice.m */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		E54E4804248289C5006B39C9 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				E54E481324828E1B006B39C9 /* IDLBasePCFactory.h */,
+				E54E481424828E1B006B39C9 /* IDLBasePCFactory.m */,
+				E54E481024828CE6006B39C9 /* IDLHPPCFactory.h */,
+				E54E481124828CE6006B39C9 /* IDLHPPCFactory.m */,
+				E54E481624828ED0006B39C9 /* IDLIBMPCFactory.h */,
+				E54E481724828ED0006B39C9 /* IDLIBMPCFactory.m */,
+				E54E481924828F39006B39C9 /* IDLApplePCFactory.h */,
+				E54E481A24828F39006B39C9 /* IDLApplePCFactory.m */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		E54E481C24828FAF006B39C9 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				E54E481D24828FDF006B39C9 /* IDLFactoryDesignPatternShowCase.h */,
+				E54E481E24828FDF006B39C9 /* IDLFactoryDesignPatternShowCase.m */,
+			);
+			path = Client;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,10 +240,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E54E481B24828F39006B39C9 /* IDLApplePCFactory.m in Sources */,
+				E54E481824828ED0006B39C9 /* IDLIBMPCFactory.m in Sources */,
 				E54E47EF248288F3006B39C9 /* ViewController.m in Sources */,
+				E54E480C24828BFE006B39C9 /* IDLIBMPCDevice.m in Sources */,
 				E54E47E9248288F3006B39C9 /* AppDelegate.m in Sources */,
+				E54E480924828B4A006B39C9 /* IDLHPPCDevice.m in Sources */,
 				E54E47FA248288F9006B39C9 /* main.m in Sources */,
 				E54E47EC248288F3006B39C9 /* SceneDelegate.m in Sources */,
+				E54E480F24828C56006B39C9 /* IDLApplePCDevice.m in Sources */,
+				E54E481F24828FDF006B39C9 /* IDLFactoryDesignPatternShowCase.m in Sources */,
+				E54E481224828CE6006B39C9 /* IDLHPPCFactory.m in Sources */,
+				E54E481524828E1B006B39C9 /* IDLBasePCFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
