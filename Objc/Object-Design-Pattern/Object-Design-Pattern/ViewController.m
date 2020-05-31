@@ -16,6 +16,9 @@
 //Abstract Factories Design Pattern
 #import "IDLAbstractFactoryDesignPatternShowCase.h"
 
+//Builder Design Pattern
+#import "IDLBuilderDesignPatternShowCase.h"
+
 @interface ViewController ()
 
 @end
@@ -30,6 +33,9 @@
     
     IDLAbstractFactoryDesignPatternShowCase *absFactoryDesignPatternShowCase = [IDLAbstractFactoryDesignPatternShowCase new];
     [absFactoryDesignPatternShowCase showCase];
+    
+    IDLBuilderDesignPatternShowCase *builderDesignPatternShowCase = [IDLBuilderDesignPatternShowCase new];
+    [builderDesignPatternShowCase showCase];
     
 }
 

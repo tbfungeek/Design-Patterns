@@ -20,6 +20,11 @@
 		E51114F4248346C600BDB836 /* IDLApplePCDeviceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E51114F3248346C600BDB836 /* IDLApplePCDeviceFactory.m */; };
 		E51114F82483478D00BDB836 /* IDLAbstractFactoryDesignPatternShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E51114F72483478D00BDB836 /* IDLAbstractFactoryDesignPatternShowCase.m */; };
 		E51114FB24834DED00BDB836 /* IDLApplePCFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E51114FA24834DED00BDB836 /* IDLApplePCFactory.m */; };
+		E511150324836D1C00BDB836 /* IDLHouse.m in Sources */ = {isa = PBXBuildFile; fileRef = E511150224836D1C00BDB836 /* IDLHouse.m */; };
+		E51115082483713F00BDB836 /* IDLSimpleHouseBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E51115072483713F00BDB836 /* IDLSimpleHouseBuilder.m */; };
+		E511150B248373A400BDB836 /* IDLLuxuriousHouseBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E511150A248373A400BDB836 /* IDLLuxuriousHouseBuilder.m */; };
+		E511150E2483754700BDB836 /* IDLHouseDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = E511150D2483754700BDB836 /* IDLHouseDirector.m */; };
+		E51115122483769000BDB836 /* IDLBuilderDesignPatternShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E51115112483769000BDB836 /* IDLBuilderDesignPatternShowCase.m */; };
 		E54E47E9248288F3006B39C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E54E47E8248288F3006B39C9 /* AppDelegate.m */; };
 		E54E47EC248288F3006B39C9 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E54E47EB248288F3006B39C9 /* SceneDelegate.m */; };
 		E54E47EF248288F3006B39C9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54E47EE248288F3006B39C9 /* ViewController.m */; };
@@ -65,6 +70,17 @@
 		E51114F72483478D00BDB836 /* IDLAbstractFactoryDesignPatternShowCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLAbstractFactoryDesignPatternShowCase.m; sourceTree = "<group>"; };
 		E51114F924834DED00BDB836 /* IDLApplePCFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLApplePCFactory.h; sourceTree = "<group>"; };
 		E51114FA24834DED00BDB836 /* IDLApplePCFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLApplePCFactory.m; sourceTree = "<group>"; };
+		E511150124836D1C00BDB836 /* IDLHouse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLHouse.h; sourceTree = "<group>"; };
+		E511150224836D1C00BDB836 /* IDLHouse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLHouse.m; sourceTree = "<group>"; };
+		E511150524836F8400BDB836 /* IDLHouseBuilderProtocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLHouseBuilderProtocal.h; sourceTree = "<group>"; };
+		E51115062483713F00BDB836 /* IDLSimpleHouseBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLSimpleHouseBuilder.h; sourceTree = "<group>"; };
+		E51115072483713F00BDB836 /* IDLSimpleHouseBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLSimpleHouseBuilder.m; sourceTree = "<group>"; };
+		E5111509248373A400BDB836 /* IDLLuxuriousHouseBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLLuxuriousHouseBuilder.h; sourceTree = "<group>"; };
+		E511150A248373A400BDB836 /* IDLLuxuriousHouseBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLLuxuriousHouseBuilder.m; sourceTree = "<group>"; };
+		E511150C2483754700BDB836 /* IDLHouseDirector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLHouseDirector.h; sourceTree = "<group>"; };
+		E511150D2483754700BDB836 /* IDLHouseDirector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLHouseDirector.m; sourceTree = "<group>"; };
+		E51115102483769000BDB836 /* IDLBuilderDesignPatternShowCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLBuilderDesignPatternShowCase.h; sourceTree = "<group>"; };
+		E51115112483769000BDB836 /* IDLBuilderDesignPatternShowCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLBuilderDesignPatternShowCase.m; sourceTree = "<group>"; };
 		E54E47E4248288F3006B39C9 /* Object-Design-Pattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Object-Design-Pattern.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54E47E7248288F3006B39C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E54E47E8248288F3006B39C9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -215,8 +231,59 @@
 		E51114FC2483545C00BDB836 /* Builder */ = {
 			isa = PBXGroup;
 			children = (
+				E511150F2483765600BDB836 /* Client */,
+				E511150024836CFF00BDB836 /* Director */,
+				E51114FF24836CF300BDB836 /* Builder */,
+				E51114FD24836CD900BDB836 /* Product */,
 			);
 			path = Builder;
+			sourceTree = "<group>";
+		};
+		E51114FD24836CD900BDB836 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				E511150124836D1C00BDB836 /* IDLHouse.h */,
+				E511150224836D1C00BDB836 /* IDLHouse.m */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		E51114FF24836CF300BDB836 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				E51115062483713F00BDB836 /* IDLSimpleHouseBuilder.h */,
+				E51115072483713F00BDB836 /* IDLSimpleHouseBuilder.m */,
+				E5111509248373A400BDB836 /* IDLLuxuriousHouseBuilder.h */,
+				E511150A248373A400BDB836 /* IDLLuxuriousHouseBuilder.m */,
+				E511150424836F5F00BDB836 /* Protocals */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		E511150024836CFF00BDB836 /* Director */ = {
+			isa = PBXGroup;
+			children = (
+				E511150C2483754700BDB836 /* IDLHouseDirector.h */,
+				E511150D2483754700BDB836 /* IDLHouseDirector.m */,
+			);
+			path = Director;
+			sourceTree = "<group>";
+		};
+		E511150424836F5F00BDB836 /* Protocals */ = {
+			isa = PBXGroup;
+			children = (
+				E511150524836F8400BDB836 /* IDLHouseBuilderProtocal.h */,
+			);
+			path = Protocals;
+			sourceTree = "<group>";
+		};
+		E511150F2483765600BDB836 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				E51115102483769000BDB836 /* IDLBuilderDesignPatternShowCase.h */,
+				E51115112483769000BDB836 /* IDLBuilderDesignPatternShowCase.m */,
+			);
+			path = Client;
 			sourceTree = "<group>";
 		};
 		E54E47DB248288F3006B39C9 = {
@@ -397,10 +464,12 @@
 				E51114F4248346C600BDB836 /* IDLApplePCDeviceFactory.m in Sources */,
 				E51114D124833F9400BDB836 /* IDLDellPCKeyboard.m in Sources */,
 				E51114CE24833EF300BDB836 /* IDLDellPCScreen.m in Sources */,
+				E511150B248373A400BDB836 /* IDLLuxuriousHouseBuilder.m in Sources */,
 				E51114E82483423300BDB836 /* IDLAppleHostDevice.m in Sources */,
 				E54E47EF248288F3006B39C9 /* ViewController.m in Sources */,
 				E54E480C24828BFE006B39C9 /* IDLIBMPCDevice.m in Sources */,
 				E51114D72483409F00BDB836 /* IDLDellHostDevice.m in Sources */,
+				E511150E2483754700BDB836 /* IDLHouseDirector.m in Sources */,
 				E51114E22483418F00BDB836 /* IDLAppleKeyboard.m in Sources */,
 				E51114FB24834DED00BDB836 /* IDLApplePCFactory.m in Sources */,
 				E54E47E9248288F3006B39C9 /* AppDelegate.m in Sources */,
@@ -408,12 +477,15 @@
 				E51114D42483401F00BDB836 /* IDLDellPCMemery.m in Sources */,
 				E54E47FA248288F9006B39C9 /* main.m in Sources */,
 				E51114EE2483462100BDB836 /* IDLBasePCDeviceFactory.m in Sources */,
+				E51115082483713F00BDB836 /* IDLSimpleHouseBuilder.m in Sources */,
 				E54E47EC248288F3006B39C9 /* SceneDelegate.m in Sources */,
 				E51114E5248341E200BDB836 /* IDLApplePCMemery.m in Sources */,
 				E54E480F24828C56006B39C9 /* IDLApplePCDevice.m in Sources */,
 				E54E481F24828FDF006B39C9 /* IDLFactoryDesignPatternShowCase.m in Sources */,
+				E51115122483769000BDB836 /* IDLBuilderDesignPatternShowCase.m in Sources */,
 				E51114F82483478D00BDB836 /* IDLAbstractFactoryDesignPatternShowCase.m in Sources */,
 				E54E481224828CE6006B39C9 /* IDLHPPCFactory.m in Sources */,
+				E511150324836D1C00BDB836 /* IDLHouse.m in Sources */,
 				E51114DF2483414700BDB836 /* IDLApplePCScreen.m in Sources */,
 				E54E481524828E1B006B39C9 /* IDLBasePCFactory.m in Sources */,
 			);
