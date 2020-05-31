@@ -253,6 +253,159 @@ furnitureFactory = Art­DecoFurnitureFactory()
 furnitureFactory.packASuitFurniture()
 
 
+/**
+ 
+ Builder Design Pattern
+ 
+*/
+
+struct House {
+    var wallNum:Int = 0
+    var doorNum:Int = 0
+    var windowNum:Int = 0
+    var hasRoot:Bool = false
+    var hasGarage:Bool = false
+    
+    func showDetails() {
+        
+        print("This is a house with \(wallNum) walls, \(doorNum) doors, \(windowNum) window \(hasRoot ? "has a nice root":"without root") \(hasGarage ? "has a nice Garage":"without Garage")")
+    }
+    
+}
+
+
+protocol HouseBuilder {
+    func reset()
+    func buildWalls() -> HouseBuilder
+    func buildDoors() -> HouseBuilder
+    func buildWindows() -> HouseBuilder
+    func buildRoot() -> HouseBuilder
+    func buildGarage() -> HouseBuilder
+    func getResult() -> House
+}
+
+class SimpleHouseBuilder: HouseBuilder {
+    
+    var house:House!
+    
+    init() {
+        self.house = House()
+    }
+    
+    func reset() {
+        print("准备材料开始建造简单风格的房子")
+    }
+    
+    func buildWalls() -> HouseBuilder {
+        self.house.wallNum = 4
+        return self
+    }
+    
+    func buildDoors() -> HouseBuilder {
+        self.house.doorNum = 2
+        return self
+    }
+    
+    func buildWindows() -> HouseBuilder {
+        self.house.windowNum = 8
+        return self
+    }
+    
+    func buildRoot() -> HouseBuilder {
+        self.house.hasRoot = true
+        return self
+    }
+    
+    func buildGarage() -> HouseBuilder {
+        self.house.hasGarage = false
+        return self
+    }
+    
+    func getResult() -> House {
+        return self.house
+    }
+    
+}
+
+class LuxuriousHouseBuilder: HouseBuilder {
+    
+    var house:House!
+    
+    init() {
+        self.house = House()
+    }
+    
+    func reset() {
+        print("准备材料开始建造豪华风格的房子")
+    }
+    
+    func buildWalls() -> HouseBuilder {
+        self.house.wallNum = 4
+        return self
+    }
+    
+    func buildDoors() -> HouseBuilder {
+        self.house.doorNum = 4
+        return self
+    }
+    
+    func buildWindows() -> HouseBuilder {
+        self.house.windowNum = 8
+        return self
+    }
+    
+    func buildRoot() -> HouseBuilder {
+        self.house.hasRoot = true
+        return self
+    }
+    
+    func buildGarage() -> HouseBuilder {
+        self.house.hasGarage = true
+        return self
+    }
+    
+    func getResult() -> House {
+        return self.house
+    }
+}
+
+class HouseBuildDirector {
+    
+    var builder:HouseBuilder?
+    
+    func buildWithHouseBuilder(builder:HouseBuilder) ->  HouseBuildDirector {
+        self.builder = builder
+        
+        if let houseBuilder = self.builder  {
+            houseBuilder.buildWalls()
+                        .buildDoors()
+                        .buildWindows()
+                        .buildRoot()
+                        .buildGarage()
+        }
+        
+        return self
+    }
+    
+    func getResult() -> House? {
+        
+        if let houseBuilder = self.builder {
+            return houseBuilder.getResult()
+        }
+        
+        return nil
+    }
+}
+
+var director:HouseBuildDirector = HouseBuildDirector()
+
+director.buildWithHouseBuilder(builder: SimpleHouseBuilder()).getResult()?.showDetails()
+
+director.buildWithHouseBuilder(builder: LuxuriousHouseBuilder()).getResult()?.showDetails()
+
+
+
+
 
 
 
