@@ -6,14 +6,12 @@
 //  Copyright © 2020 linxiaohai. All rights reserved.
 //
 
-#import "IDLBasePCFactory.h"
-
 //base
-#import "IDLBasePCFactory.h"
+#import "IDLBasePCDeviceFactory.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface IDLApplePCFactory : IDLBasePCFactory
+@interface IDLApplePCDeviceFactory : IDLBasePCDeviceFactory
 
 @end
 

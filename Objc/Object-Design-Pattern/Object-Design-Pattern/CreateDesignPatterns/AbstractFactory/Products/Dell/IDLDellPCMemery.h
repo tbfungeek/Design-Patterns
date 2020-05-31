@@ -1,19 +1,19 @@
 //
-//  IDLApplePCFactory.h
+//  IDLPCMemery.h
 //  Object-Design-Pattern
 //
 //  Created by linxiaohai on 2020/5/31.
 //  Copyright © 2020 linxiaohai. All rights reserved.
 //
 
-#import "IDLBasePCFactory.h"
+#import <UIKit/UIKit.h>
 
-//base
-#import "IDLBasePCFactory.h"
+//protocals
+#import "IDLPCComponentProtocal.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface IDLApplePCFactory : IDLBasePCFactory
+@interface IDLDellPCMemery : NSObject<IDLPCComponentProtocal>
 
 @end
 

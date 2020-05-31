@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E51114CE24833EF300BDB836 /* IDLDellPCScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = E51114CD24833EF300BDB836 /* IDLDellPCScreen.m */; };
+		E51114D124833F9400BDB836 /* IDLDellPCKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = E51114D024833F9400BDB836 /* IDLDellPCKeyboard.m */; };
+		E51114D42483401F00BDB836 /* IDLDellPCMemery.m in Sources */ = {isa = PBXBuildFile; fileRef = E51114D32483401F00BDB836 /* IDLDellPCMemery.m */; };
+		E51114D72483409F00BDB836 /* IDLDellHostDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = E51114D62483409F00BDB836 /* IDLDellHostDevice.m */; };
+		E51114DF2483414700BDB836 /* IDLApplePCScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = E51114DE2483414700BDB836 /* IDLApplePCScreen.m */; };
+		E51114E22483418F00BDB836 /* IDLAppleKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = E51114E12483418F00BDB836 /* IDLAppleKeyboard.m */; };
+		E51114E5248341E200BDB836 /* IDLApplePCMemery.m in Sources */ = {isa = PBXBuildFile; fileRef = E51114E4248341E200BDB836 /* IDLApplePCMemery.m */; };
+		E51114E82483423300BDB836 /* IDLAppleHostDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = E51114E72483423300BDB836 /* IDLAppleHostDevice.m */; };
+		E51114EB2483436100BDB836 /* IDLDellPCDeviceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E51114EA2483436100BDB836 /* IDLDellPCDeviceFactory.m */; };
+		E51114EE2483462100BDB836 /* IDLBasePCDeviceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E51114ED2483462100BDB836 /* IDLBasePCDeviceFactory.m */; };
+		E51114F4248346C600BDB836 /* IDLApplePCDeviceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E51114F3248346C600BDB836 /* IDLApplePCDeviceFactory.m */; };
+		E51114F82483478D00BDB836 /* IDLAbstractFactoryDesignPatternShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E51114F72483478D00BDB836 /* IDLAbstractFactoryDesignPatternShowCase.m */; };
+		E51114FB24834DED00BDB836 /* IDLApplePCFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E51114FA24834DED00BDB836 /* IDLApplePCFactory.m */; };
 		E54E47E9248288F3006B39C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E54E47E8248288F3006B39C9 /* AppDelegate.m */; };
 		E54E47EC248288F3006B39C9 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E54E47EB248288F3006B39C9 /* SceneDelegate.m */; };
 		E54E47EF248288F3006B39C9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54E47EE248288F3006B39C9 /* ViewController.m */; };
@@ -20,11 +33,38 @@
 		E54E481224828CE6006B39C9 /* IDLHPPCFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E54E481124828CE6006B39C9 /* IDLHPPCFactory.m */; };
 		E54E481524828E1B006B39C9 /* IDLBasePCFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E54E481424828E1B006B39C9 /* IDLBasePCFactory.m */; };
 		E54E481824828ED0006B39C9 /* IDLIBMPCFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E54E481724828ED0006B39C9 /* IDLIBMPCFactory.m */; };
-		E54E481B24828F39006B39C9 /* IDLApplePCFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E54E481A24828F39006B39C9 /* IDLApplePCFactory.m */; };
 		E54E481F24828FDF006B39C9 /* IDLFactoryDesignPatternShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E54E481E24828FDF006B39C9 /* IDLFactoryDesignPatternShowCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E51114CA24833D0B00BDB836 /* IDLPCComponentProtocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLPCComponentProtocal.h; sourceTree = "<group>"; };
+		E51114CB24833DCB00BDB836 /* IDLPCDeviceFactoryProtocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLPCDeviceFactoryProtocal.h; sourceTree = "<group>"; };
+		E51114CC24833EF300BDB836 /* IDLDellPCScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLDellPCScreen.h; sourceTree = "<group>"; };
+		E51114CD24833EF300BDB836 /* IDLDellPCScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLDellPCScreen.m; sourceTree = "<group>"; };
+		E51114CF24833F9300BDB836 /* IDLDellPCKeyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLDellPCKeyboard.h; sourceTree = "<group>"; };
+		E51114D024833F9400BDB836 /* IDLDellPCKeyboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLDellPCKeyboard.m; sourceTree = "<group>"; };
+		E51114D22483401F00BDB836 /* IDLDellPCMemery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLDellPCMemery.h; sourceTree = "<group>"; };
+		E51114D32483401F00BDB836 /* IDLDellPCMemery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLDellPCMemery.m; sourceTree = "<group>"; };
+		E51114D52483409F00BDB836 /* IDLDellHostDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLDellHostDevice.h; sourceTree = "<group>"; };
+		E51114D62483409F00BDB836 /* IDLDellHostDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLDellHostDevice.m; sourceTree = "<group>"; };
+		E51114DD2483414700BDB836 /* IDLApplePCScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLApplePCScreen.h; sourceTree = "<group>"; };
+		E51114DE2483414700BDB836 /* IDLApplePCScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLApplePCScreen.m; sourceTree = "<group>"; };
+		E51114E02483418F00BDB836 /* IDLAppleKeyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLAppleKeyboard.h; sourceTree = "<group>"; };
+		E51114E12483418F00BDB836 /* IDLAppleKeyboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLAppleKeyboard.m; sourceTree = "<group>"; };
+		E51114E3248341E200BDB836 /* IDLApplePCMemery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLApplePCMemery.h; sourceTree = "<group>"; };
+		E51114E4248341E200BDB836 /* IDLApplePCMemery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLApplePCMemery.m; sourceTree = "<group>"; };
+		E51114E62483423300BDB836 /* IDLAppleHostDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLAppleHostDevice.h; sourceTree = "<group>"; };
+		E51114E72483423300BDB836 /* IDLAppleHostDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLAppleHostDevice.m; sourceTree = "<group>"; };
+		E51114E92483436100BDB836 /* IDLDellPCDeviceFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLDellPCDeviceFactory.h; sourceTree = "<group>"; };
+		E51114EA2483436100BDB836 /* IDLDellPCDeviceFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLDellPCDeviceFactory.m; sourceTree = "<group>"; };
+		E51114EC2483462100BDB836 /* IDLBasePCDeviceFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLBasePCDeviceFactory.h; sourceTree = "<group>"; };
+		E51114ED2483462100BDB836 /* IDLBasePCDeviceFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLBasePCDeviceFactory.m; sourceTree = "<group>"; };
+		E51114F2248346C600BDB836 /* IDLApplePCDeviceFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLApplePCDeviceFactory.h; sourceTree = "<group>"; };
+		E51114F3248346C600BDB836 /* IDLApplePCDeviceFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLApplePCDeviceFactory.m; sourceTree = "<group>"; };
+		E51114F62483478D00BDB836 /* IDLAbstractFactoryDesignPatternShowCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLAbstractFactoryDesignPatternShowCase.h; sourceTree = "<group>"; };
+		E51114F72483478D00BDB836 /* IDLAbstractFactoryDesignPatternShowCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLAbstractFactoryDesignPatternShowCase.m; sourceTree = "<group>"; };
+		E51114F924834DED00BDB836 /* IDLApplePCFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLApplePCFactory.h; sourceTree = "<group>"; };
+		E51114FA24834DED00BDB836 /* IDLApplePCFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLApplePCFactory.m; sourceTree = "<group>"; };
 		E54E47E4248288F3006B39C9 /* Object-Design-Pattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Object-Design-Pattern.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54E47E7248288F3006B39C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E54E47E8248288F3006B39C9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,8 +91,6 @@
 		E54E481424828E1B006B39C9 /* IDLBasePCFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLBasePCFactory.m; sourceTree = "<group>"; };
 		E54E481624828ED0006B39C9 /* IDLIBMPCFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLIBMPCFactory.h; sourceTree = "<group>"; };
 		E54E481724828ED0006B39C9 /* IDLIBMPCFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLIBMPCFactory.m; sourceTree = "<group>"; };
-		E54E481924828F39006B39C9 /* IDLApplePCFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLApplePCFactory.h; sourceTree = "<group>"; };
-		E54E481A24828F39006B39C9 /* IDLApplePCFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLApplePCFactory.m; sourceTree = "<group>"; };
 		E54E481D24828FDF006B39C9 /* IDLFactoryDesignPatternShowCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLFactoryDesignPatternShowCase.h; sourceTree = "<group>"; };
 		E54E481E24828FDF006B39C9 /* IDLFactoryDesignPatternShowCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLFactoryDesignPatternShowCase.m; sourceTree = "<group>"; };
 		E54E48202482900B006B39C9 /* IDLDesignPatternShowCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLDesignPatternShowCase.h; sourceTree = "<group>"; };
@@ -69,6 +107,111 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E51114C624833C7800BDB836 /* AbstractFactory */ = {
+			isa = PBXGroup;
+			children = (
+				E51114F52483475B00BDB836 /* Client */,
+				E51114C924833CB200BDB836 /* Factories */,
+				E51114C824833C9F00BDB836 /* Products */,
+				E51114C724833C8F00BDB836 /* Protocals */,
+			);
+			path = AbstractFactory;
+			sourceTree = "<group>";
+		};
+		E51114C724833C8F00BDB836 /* Protocals */ = {
+			isa = PBXGroup;
+			children = (
+				E51114CA24833D0B00BDB836 /* IDLPCComponentProtocal.h */,
+				E51114CB24833DCB00BDB836 /* IDLPCDeviceFactoryProtocal.h */,
+			);
+			path = Protocals;
+			sourceTree = "<group>";
+		};
+		E51114C824833C9F00BDB836 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E51114D9248340F500BDB836 /* Apple */,
+				E51114D8248340E300BDB836 /* Dell */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		E51114C924833CB200BDB836 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				E51114F12483463600BDB836 /* Apple */,
+				E51114F02483462F00BDB836 /* Dell */,
+				E51114EF2483462900BDB836 /* Base */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		E51114D8248340E300BDB836 /* Dell */ = {
+			isa = PBXGroup;
+			children = (
+				E51114CC24833EF300BDB836 /* IDLDellPCScreen.h */,
+				E51114CD24833EF300BDB836 /* IDLDellPCScreen.m */,
+				E51114CF24833F9300BDB836 /* IDLDellPCKeyboard.h */,
+				E51114D024833F9400BDB836 /* IDLDellPCKeyboard.m */,
+				E51114D22483401F00BDB836 /* IDLDellPCMemery.h */,
+				E51114D32483401F00BDB836 /* IDLDellPCMemery.m */,
+				E51114D52483409F00BDB836 /* IDLDellHostDevice.h */,
+				E51114D62483409F00BDB836 /* IDLDellHostDevice.m */,
+			);
+			path = Dell;
+			sourceTree = "<group>";
+		};
+		E51114D9248340F500BDB836 /* Apple */ = {
+			isa = PBXGroup;
+			children = (
+				E51114DD2483414700BDB836 /* IDLApplePCScreen.h */,
+				E51114DE2483414700BDB836 /* IDLApplePCScreen.m */,
+				E51114E02483418F00BDB836 /* IDLAppleKeyboard.h */,
+				E51114E12483418F00BDB836 /* IDLAppleKeyboard.m */,
+				E51114E3248341E200BDB836 /* IDLApplePCMemery.h */,
+				E51114E4248341E200BDB836 /* IDLApplePCMemery.m */,
+				E51114E62483423300BDB836 /* IDLAppleHostDevice.h */,
+				E51114E72483423300BDB836 /* IDLAppleHostDevice.m */,
+			);
+			path = Apple;
+			sourceTree = "<group>";
+		};
+		E51114EF2483462900BDB836 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E51114EC2483462100BDB836 /* IDLBasePCDeviceFactory.h */,
+				E51114ED2483462100BDB836 /* IDLBasePCDeviceFactory.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E51114F02483462F00BDB836 /* Dell */ = {
+			isa = PBXGroup;
+			children = (
+				E51114E92483436100BDB836 /* IDLDellPCDeviceFactory.h */,
+				E51114EA2483436100BDB836 /* IDLDellPCDeviceFactory.m */,
+			);
+			path = Dell;
+			sourceTree = "<group>";
+		};
+		E51114F12483463600BDB836 /* Apple */ = {
+			isa = PBXGroup;
+			children = (
+				E51114F2248346C600BDB836 /* IDLApplePCDeviceFactory.h */,
+				E51114F3248346C600BDB836 /* IDLApplePCDeviceFactory.m */,
+			);
+			path = Apple;
+			sourceTree = "<group>";
+		};
+		E51114F52483475B00BDB836 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				E51114F62483478D00BDB836 /* IDLAbstractFactoryDesignPatternShowCase.h */,
+				E51114F72483478D00BDB836 /* IDLAbstractFactoryDesignPatternShowCase.m */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
 		E54E47DB248288F3006B39C9 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +251,7 @@
 		E54E48002482896C006B39C9 /* CreateDesignPatterns */ = {
 			isa = PBXGroup;
 			children = (
+				E51114C624833C7800BDB836 /* AbstractFactory */,
 				E54E480124828991006B39C9 /* Factory */,
 			);
 			path = CreateDesignPatterns;
@@ -155,8 +299,8 @@
 				E54E481124828CE6006B39C9 /* IDLHPPCFactory.m */,
 				E54E481624828ED0006B39C9 /* IDLIBMPCFactory.h */,
 				E54E481724828ED0006B39C9 /* IDLIBMPCFactory.m */,
-				E54E481924828F39006B39C9 /* IDLApplePCFactory.h */,
-				E54E481A24828F39006B39C9 /* IDLApplePCFactory.m */,
+				E51114F924834DED00BDB836 /* IDLApplePCFactory.h */,
+				E51114FA24834DED00BDB836 /* IDLApplePCFactory.m */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -240,17 +384,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E54E481B24828F39006B39C9 /* IDLApplePCFactory.m in Sources */,
 				E54E481824828ED0006B39C9 /* IDLIBMPCFactory.m in Sources */,
+				E51114EB2483436100BDB836 /* IDLDellPCDeviceFactory.m in Sources */,
+				E51114F4248346C600BDB836 /* IDLApplePCDeviceFactory.m in Sources */,
+				E51114D124833F9400BDB836 /* IDLDellPCKeyboard.m in Sources */,
+				E51114CE24833EF300BDB836 /* IDLDellPCScreen.m in Sources */,
+				E51114E82483423300BDB836 /* IDLAppleHostDevice.m in Sources */,
 				E54E47EF248288F3006B39C9 /* ViewController.m in Sources */,
 				E54E480C24828BFE006B39C9 /* IDLIBMPCDevice.m in Sources */,
+				E51114D72483409F00BDB836 /* IDLDellHostDevice.m in Sources */,
+				E51114E22483418F00BDB836 /* IDLAppleKeyboard.m in Sources */,
+				E51114FB24834DED00BDB836 /* IDLApplePCFactory.m in Sources */,
 				E54E47E9248288F3006B39C9 /* AppDelegate.m in Sources */,
 				E54E480924828B4A006B39C9 /* IDLHPPCDevice.m in Sources */,
+				E51114D42483401F00BDB836 /* IDLDellPCMemery.m in Sources */,
 				E54E47FA248288F9006B39C9 /* main.m in Sources */,
+				E51114EE2483462100BDB836 /* IDLBasePCDeviceFactory.m in Sources */,
 				E54E47EC248288F3006B39C9 /* SceneDelegate.m in Sources */,
+				E51114E5248341E200BDB836 /* IDLApplePCMemery.m in Sources */,
 				E54E480F24828C56006B39C9 /* IDLApplePCDevice.m in Sources */,
 				E54E481F24828FDF006B39C9 /* IDLFactoryDesignPatternShowCase.m in Sources */,
+				E51114F82483478D00BDB836 /* IDLAbstractFactoryDesignPatternShowCase.m in Sources */,
 				E54E481224828CE6006B39C9 /* IDLHPPCFactory.m in Sources */,
+				E51114DF2483414700BDB836 /* IDLApplePCScreen.m in Sources */,
 				E54E481524828E1B006B39C9 /* IDLBasePCFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

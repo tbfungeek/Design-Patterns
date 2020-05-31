@@ -2,7 +2,7 @@
 //  IDLApplePCFactory.m
 //  Object-Design-Pattern
 //
-//  Created by linxiaohai on 2020/5/30.
+//  Created by linxiaohai on 2020/5/31.
 //  Copyright © 2020 linxiaohai. All rights reserved.
 //
 
@@ -12,8 +12,6 @@
 #import "IDLApplePCDevice.h"
 
 @implementation IDLApplePCFactory
-
-#pragma mark - IDLPCFactoryProtocal
 
 - (id<IDLPCDeviceProtocal>)createPCDevice {
     return [IDLApplePCDevice new];

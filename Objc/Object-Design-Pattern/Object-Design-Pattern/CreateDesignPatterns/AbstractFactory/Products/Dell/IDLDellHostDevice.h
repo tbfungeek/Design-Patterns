@@ -1,19 +1,19 @@
 //
-//  IDLApplePCFactory.h
+//  IDLDellHostDevice.h
 //  Object-Design-Pattern
 //
 //  Created by linxiaohai on 2020/5/31.
 //  Copyright © 2020 linxiaohai. All rights reserved.
 //
 
-#import "IDLBasePCFactory.h"
+#import <UIKit/UIKit.h>
 
-//base
-#import "IDLBasePCFactory.h"
+//protocal
+#import "IDLPCComponentProtocal.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface IDLApplePCFactory : IDLBasePCFactory
+@interface IDLDellHostDevice : NSObject<IDLPCComponentProtocal>
 
 @end
 
