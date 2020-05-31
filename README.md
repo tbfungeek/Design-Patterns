@@ -59,11 +59,11 @@
 1. 通过将整体构建过程和具体部件的构建过程分离，达到使用同一个构建过程创建出不同表示的目的。
 2. 创建目标对象步骤十分灵活繁琐，并且有些情况需要设置某些参数，有些则不需要。
 
-
 ![](./images/builder_struct.png)
 
-创建者模式的主要变化集中在Director中。而Builder负责生成产品对象并按照Director的知道构建产品，最后通过Builder执行交付产品工作。Director负责根据不同的类型调用Builder执行不同的产品构建过程。
+创建者模式的主要变化集中在Director中。而Builder只负责生成产品对象并按照Director的指导构建产品，最后通过Builder执行交付产品工作。Director负责根据不同的类型调用Builder执行不同的产品构建过程。
 
+也就是说应用层只负责将建造者交给指导者，指导者知道怎么创建一个产品，但是具体的产品生产过程是通过建造者来完成的。创建步骤在Director中，但是每个环节怎么实现是放在Builder中。要创建不同的对象只需要，创建不同的Builder交给Director，由Director指导Builder一步一步完成产品生成任务，最后按照Builder -> Director -> 应用层 这样层次结构逐级交付。
 
 
 
