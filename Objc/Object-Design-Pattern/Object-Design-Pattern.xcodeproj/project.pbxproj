@@ -212,6 +212,13 @@
 			path = Client;
 			sourceTree = "<group>";
 		};
+		E51114FC2483545C00BDB836 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 		E54E47DB248288F3006B39C9 = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +258,7 @@
 		E54E48002482896C006B39C9 /* CreateDesignPatterns */ = {
 			isa = PBXGroup;
 			children = (
+				E51114FC2483545C00BDB836 /* Builder */,
 				E51114C624833C7800BDB836 /* AbstractFactory */,
 				E54E480124828991006B39C9 /* Factory */,
 			);
