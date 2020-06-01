@@ -404,7 +404,51 @@ director.buildWithHouseBuilder(builder: SimpleHouseBuilder()).getResult()?.showD
 director.buildWithHouseBuilder(builder: LuxuriousHouseBuilder()).getResult()?.showDetails()
 
 
+import Foundation
+/**
+ 
+ Prototype  Design Pattern
+ 
+*/
 
+class BaseClass:NSObject, NSCopying {
+    
+    var value1 = 54
+    
+    //必须使用required关键字修饰
+    required override init() {
+        
+    }
+    
+    func copy(with zone: NSZone? = nil) -> Any {
+        //最顶层的子类类型
+        let theCopyObjc = type(of: self).init()
+        theCopyObjc.value1 = self.value1
+        return theCopyObjc
+    }
+}
+
+class CloneAbleClass:BaseClass {
+    var value2 = 44
+    
+    override func copy(with zone: NSZone? = nil) -> Any {
+        let theCopyObj = super.copy(with: zone) as!CloneAbleClass
+        theCopyObj.value2 = self.value2
+        return theCopyObj
+    }
+}
+
+let cloneAbleObjc:CloneAbleClass = CloneAbleClass()
+
+
+var objectPool:Array<CloneAbleClass> = []
+
+for _ in 0..<10 {
+    objectPool.append(cloneAbleObjc.copy() as! CloneAbleClass)
+}
+
+print(cloneAbleObjc.value1)
+print(cloneAbleObjc.value2)
 
 
 
