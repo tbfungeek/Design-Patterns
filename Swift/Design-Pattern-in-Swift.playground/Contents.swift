@@ -451,6 +451,100 @@ print(cloneAbleObjc.value1)
 print(cloneAbleObjc.value2)
 
 
+class Shape:NSCopying {
+    var x:Int = 0
+    var y:Int = 0
+    
+    init() {
+    }
+    
+    init(x:Int,y:Int) {
+        self.x = x
+        self.y = y
+    }
+    
+    required init(shape:Shape) {
+        self.x = shape.x
+        self.y = shape.y
+    }
+    
+    func copy(with zone: NSZone? = nil) -> Any {
+        return type(of: self).init(shape: self)
+    }
+}
+
+class Rectangle:Shape {
+    var width:Int = 0
+    var height:Int = 0
+    
+    override init() {
+        super.init()
+    }
+    
+    init(x:Int, y:Int, width:Int, height:Int) {
+        super.init(x: x, y: y)
+        self.width = width
+        self.height = height
+    }
+    
+    required convenience init(shape: Shape) {
+        self.init(x: shape.x,y: shape.y ,width: 0,height: 0)
+    }
+    
+    override func copy(with zone: NSZone? = nil) -> Any {
+        let object = super.copy(with: zone) as! Rectangle
+        object.width = self.width
+        object.height = self.height
+        return object
+    }
+}
+
+class Circle:Shape {
+    
+    var circleRadius:Int = 0
+    
+    override init() {
+        super.init()
+    }
+    
+    init(x:Int, y:Int, circleRadius:Int) {
+        super.init(x: x, y: y)
+        self.circleRadius = circleRadius
+    }
+    
+    required convenience init(shape: Shape) {
+        self.init(x: shape.x,y: shape.y , circleRadius:0)
+    }
+    
+    override func copy(with zone: NSZone? = nil) -> Any {
+        let object = super.copy(with: zone) as! Circle
+        object.circleRadius = self.circleRadius
+        return object
+    }
+}
+
+let rect1 = Rectangle(x: 100, y: 100, width: 200, height: 300)
+let rect2 = Rectangle(x: 101, y: 110, width: 201, height: 310)
+let rect3 = Rectangle(x: 102, y: 120, width: 202, height: 320)
+let rect4 = Rectangle(x: 103, y: 130, width: 203, height: 330)
+let rect5 = Rectangle(x: 104, y: 140, width: 204, height: 340)
+let circle1 = Circle(x: 100, y: 100, circleRadius: 410)
+let circle2 = Circle(x: 100, y: 100, circleRadius: 420)
+let circle3 = Circle(x: 100, y: 100, circleRadius: 430)
+let circle4 = Circle(x: 100, y: 100, circleRadius: 440)
+let circle5 = Circle(x: 100, y: 100, circleRadius: 450)
+
+var shapes = [rect1,rect2,rect3,rect4,rect5,circle1,circle2,circle3,circle4,circle5]
+var shapeCopy:Array<Shape> = []
+
+for shape in shapes {
+    shapeCopy.append(shape.copy() as! Shape)
+}
+
+shapeCopy
+
+
+
 
 
 
