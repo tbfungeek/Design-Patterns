@@ -621,6 +621,87 @@ let adapter = Adapter(adaptee: Adaptee())
 print(adapter.getDataWithJsonFormat())
 
 
+/**
+ 
+ Facade Design Pattern
+ 
+*/
+
+protocol DrawShapProtocol {
+    func drawShap()
+}
+
+class LineDrawer:DrawShapProtocol {
+    
+    func drawShap() {
+        print("Draw a line")
+    }
+}
+
+class RectDrawer:DrawShapProtocol {
+    
+    func drawShap() {
+        print("Draw a Rect")
+    }
+}
+
+class CircleDrawer:DrawShapProtocol {
+    
+    func drawShap() {
+        print("Draw a Circle")
+    }
+}
+
+
+class Facade {
+    
+    let lineDrawer:LineDrawer
+    let rectDrawer:RectDrawer
+    let circleDrawer:CircleDrawer
+    
+    private init() {
+        lineDrawer      = LineDrawer()
+        rectDrawer      = RectDrawer()
+        circleDrawer    = CircleDrawer()
+    }
+    
+    static let shared:Facade = {
+        let instance = Facade()
+        return instance
+    }()
+    
+    func drawPicOne() {
+        print("Begin to draw Picture One ......")
+        self.lineDrawer.drawShap()
+        self.lineDrawer.drawShap()
+        self.circleDrawer.drawShap()
+        self.lineDrawer.drawShap()
+        self.rectDrawer.drawShap()
+        print("End to draw Picture One ......")
+    }
+    
+    func drawPicTwo() {
+        print("Begin to draw Picture TWo ......")
+        self.circleDrawer.drawShap()
+        self.circleDrawer.drawShap()
+        self.lineDrawer.drawShap()
+        self.rectDrawer.drawShap()
+        print("End to draw Picture TWo ......")
+    }
+}
+
+extension Facade:NSCopying {
+    
+    func copy(with zone: NSZone? = nil) -> Any {
+        return self
+    }
+}
+
+Facade.shared.drawPicOne()
+Facade.shared.drawPicTwo()
+
+
+
 
 
 
