@@ -19,6 +19,9 @@
 //Builder Design Pattern
 #import "IDLBuilderDesignPatternShowCase.h"
 
+//Prototype Design Pattern
+#import "IDLPrototypeDesignPatternShowCase.h"
+
 @interface ViewController ()
 
 @end
@@ -37,6 +40,8 @@
     IDLBuilderDesignPatternShowCase *builderDesignPatternShowCase = [IDLBuilderDesignPatternShowCase new];
     [builderDesignPatternShowCase showCase];
     
+    IDLPrototypeDesignPatternShowCase *prototypeDesignPatternShowCase = [IDLPrototypeDesignPatternShowCase new];
+    [prototypeDesignPatternShowCase showCase];
 }
 
 
