@@ -405,6 +405,7 @@ director.buildWithHouseBuilder(builder: LuxuriousHouseBuilder()).getResult()?.sh
 
 
 import Foundation
+
 /**
  
  Prototype  Design Pattern
@@ -543,8 +544,43 @@ for shape in shapes {
 
 shapeCopy
 
+/**
+ 
+ Singleton  Design Pattern
+ 
+*/
 
 
+class SingletonObject {
+    
+    static let shared:SingletonObject = SingletonObject()
+    
+}
+
+print(SingletonObject.shared === SingletonObject.shared)
+
+
+
+class Singleton {
+    
+    private init() {
+        
+    }
+    
+    static let shared:Singleton = {
+        let instance = Singleton()
+        return instance
+    }()
+}
+
+extension Singleton:NSCopying {
+    
+    func copy(with zone: NSZone? = nil) -> Any {
+        return self
+    }
+}
+
+print(Singleton.shared === Singleton.shared)
 
 
 
