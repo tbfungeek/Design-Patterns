@@ -28,6 +28,9 @@
 //Adapter Design Pattern
 #import "IDLAdapterDesignPatternShowCase.h"
 
+//Facade Design Pattern
+#import "IDLFacadeDesignPatternShowCase.h"
+
 @interface ViewController ()
 
 @end
@@ -54,6 +57,9 @@
     
     IDLAdapterDesignPatternShowCase *adapterDesignPatternShowCase = [IDLAdapterDesignPatternShowCase new];
     [adapterDesignPatternShowCase showCase];
+    
+    IDLFacadeDesignPatternShowCase *facadeDesignPatternShowCase = [IDLFacadeDesignPatternShowCase new];
+    [facadeDesignPatternShowCase showCase];
 }
 
 
