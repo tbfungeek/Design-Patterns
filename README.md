@@ -101,8 +101,13 @@
 
 #### 结构型模式
 
-- 外观模式（Facade）:
 - 适配器模式（Adapter）:
+
+![](./images/20190321153744265.png)
+![](./images/solution-zh.png)
+![](./images/adapter.png)
+
+- 外观模式（Facade）:
 - 代理模式（Proxy）:
 - 装饰模式（Decorator）:
 - 桥模式（Bridge）:
