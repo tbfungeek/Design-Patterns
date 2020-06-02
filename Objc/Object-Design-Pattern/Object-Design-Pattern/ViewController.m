@@ -25,6 +25,9 @@
 //Singleton Design Pattern
 #import "IDLSingletonDesignPatternShowCase.h"
 
+//Adapter Design Pattern
+#import "IDLAdapterDesignPatternShowCase.h"
+
 @interface ViewController ()
 
 @end
@@ -48,6 +51,9 @@
     
     IDLSingletonDesignPatternShowCase *singletonDesignPatternShowCase = [IDLSingletonDesignPatternShowCase new];
     [singletonDesignPatternShowCase showCase];
+    
+    IDLAdapterDesignPatternShowCase *adapterDesignPatternShowCase = [IDLAdapterDesignPatternShowCase new];
+    [adapterDesignPatternShowCase showCase];
 }
 
 

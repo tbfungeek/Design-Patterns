@@ -12,6 +12,9 @@
 		DA2606422485D86100E128D0 /* IDLPrototypeDesignPatternShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2606412485D86100E128D0 /* IDLPrototypeDesignPatternShowCase.m */; };
 		E50A8B5A248643BE00B8D92D /* IDLSingletonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E50A8B59248643BE00B8D92D /* IDLSingletonObject.m */; };
 		E50A8B5E2486445800B8D92D /* IDLSingletonDesignPatternShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E50A8B5D2486445800B8D92D /* IDLSingletonDesignPatternShowCase.m */; };
+		E50A8B6524865A8100B8D92D /* IDLAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = E50A8B6424865A8100B8D92D /* IDLAdapter.m */; };
+		E50A8B6B24865B7F00B8D92D /* IDLAdaptee.m in Sources */ = {isa = PBXBuildFile; fileRef = E50A8B6A24865B7F00B8D92D /* IDLAdaptee.m */; };
+		E50A8B6F24865CCC00B8D92D /* IDLAdapterDesignPatternShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E50A8B6E24865CCC00B8D92D /* IDLAdapterDesignPatternShowCase.m */; };
 		E51114CE24833EF300BDB836 /* IDLDellPCScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = E51114CD24833EF300BDB836 /* IDLDellPCScreen.m */; };
 		E51114D124833F9400BDB836 /* IDLDellPCKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = E51114D024833F9400BDB836 /* IDLDellPCKeyboard.m */; };
 		E51114D42483401F00BDB836 /* IDLDellPCMemery.m in Sources */ = {isa = PBXBuildFile; fileRef = E51114D32483401F00BDB836 /* IDLDellPCMemery.m */; };
@@ -57,6 +60,13 @@
 		E50A8B59248643BE00B8D92D /* IDLSingletonObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLSingletonObject.m; sourceTree = "<group>"; };
 		E50A8B5C2486445800B8D92D /* IDLSingletonDesignPatternShowCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLSingletonDesignPatternShowCase.h; sourceTree = "<group>"; };
 		E50A8B5D2486445800B8D92D /* IDLSingletonDesignPatternShowCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLSingletonDesignPatternShowCase.m; sourceTree = "<group>"; };
+		E50A8B6124865A2B00B8D92D /* IDLTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLTarget.h; sourceTree = "<group>"; };
+		E50A8B6324865A8100B8D92D /* IDLAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLAdapter.h; sourceTree = "<group>"; };
+		E50A8B6424865A8100B8D92D /* IDLAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLAdapter.m; sourceTree = "<group>"; };
+		E50A8B6924865B7F00B8D92D /* IDLAdaptee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLAdaptee.h; sourceTree = "<group>"; };
+		E50A8B6A24865B7F00B8D92D /* IDLAdaptee.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLAdaptee.m; sourceTree = "<group>"; };
+		E50A8B6D24865CCC00B8D92D /* IDLAdapterDesignPatternShowCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLAdapterDesignPatternShowCase.h; sourceTree = "<group>"; };
+		E50A8B6E24865CCC00B8D92D /* IDLAdapterDesignPatternShowCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLAdapterDesignPatternShowCase.m; sourceTree = "<group>"; };
 		E51114CA24833D0B00BDB836 /* IDLPCComponentProtocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLPCComponentProtocal.h; sourceTree = "<group>"; };
 		E51114CB24833DCB00BDB836 /* IDLPCDeviceFactoryProtocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLPCDeviceFactoryProtocal.h; sourceTree = "<group>"; };
 		E51114CC24833EF300BDB836 /* IDLDellPCScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLDellPCScreen.h; sourceTree = "<group>"; };
@@ -174,6 +184,44 @@
 			children = (
 				E50A8B5C2486445800B8D92D /* IDLSingletonDesignPatternShowCase.h */,
 				E50A8B5D2486445800B8D92D /* IDLSingletonDesignPatternShowCase.m */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		E50A8B5F2486594800B8D92D /* StructDesignPatterns */ = {
+			isa = PBXGroup;
+			children = (
+				E50A8B602486596100B8D92D /* Adapter */,
+			);
+			path = StructDesignPatterns;
+			sourceTree = "<group>";
+		};
+		E50A8B602486596100B8D92D /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				E50A8B6C24865C9C00B8D92D /* Client */,
+				E50A8B6224865A6000B8D92D /* Protocols */,
+				E50A8B6324865A8100B8D92D /* IDLAdapter.h */,
+				E50A8B6424865A8100B8D92D /* IDLAdapter.m */,
+				E50A8B6924865B7F00B8D92D /* IDLAdaptee.h */,
+				E50A8B6A24865B7F00B8D92D /* IDLAdaptee.m */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		E50A8B6224865A6000B8D92D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E50A8B6124865A2B00B8D92D /* IDLTarget.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E50A8B6C24865C9C00B8D92D /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				E50A8B6D24865CCC00B8D92D /* IDLAdapterDesignPatternShowCase.h */,
+				E50A8B6E24865CCC00B8D92D /* IDLAdapterDesignPatternShowCase.m */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -360,6 +408,7 @@
 		E54E47E6248288F3006B39C9 /* Object-Design-Pattern */ = {
 			isa = PBXGroup;
 			children = (
+				E50A8B5F2486594800B8D92D /* StructDesignPatterns */,
 				E54E48202482900B006B39C9 /* IDLDesignPatternShowCase.h */,
 				E54E48002482896C006B39C9 /* CreateDesignPatterns */,
 				E54E47E7248288F3006B39C9 /* AppDelegate.h */,
@@ -520,6 +569,7 @@
 				E51114EB2483436100BDB836 /* IDLDellPCDeviceFactory.m in Sources */,
 				E51114F4248346C600BDB836 /* IDLApplePCDeviceFactory.m in Sources */,
 				E51114D124833F9400BDB836 /* IDLDellPCKeyboard.m in Sources */,
+				E50A8B6B24865B7F00B8D92D /* IDLAdaptee.m in Sources */,
 				E51114CE24833EF300BDB836 /* IDLDellPCScreen.m in Sources */,
 				E511150B248373A400BDB836 /* IDLLuxuriousHouseBuilder.m in Sources */,
 				E51114E82483423300BDB836 /* IDLAppleHostDevice.m in Sources */,
@@ -536,6 +586,7 @@
 				E54E47FA248288F9006B39C9 /* main.m in Sources */,
 				DA2606422485D86100E128D0 /* IDLPrototypeDesignPatternShowCase.m in Sources */,
 				E50A8B5A248643BE00B8D92D /* IDLSingletonObject.m in Sources */,
+				E50A8B6F24865CCC00B8D92D /* IDLAdapterDesignPatternShowCase.m in Sources */,
 				E51114EE2483462100BDB836 /* IDLBasePCDeviceFactory.m in Sources */,
 				E51115082483713F00BDB836 /* IDLSimpleHouseBuilder.m in Sources */,
 				E54E47EC248288F3006B39C9 /* SceneDelegate.m in Sources */,
@@ -543,6 +594,7 @@
 				E54E480F24828C56006B39C9 /* IDLApplePCDevice.m in Sources */,
 				E50A8B5E2486445800B8D92D /* IDLSingletonDesignPatternShowCase.m in Sources */,
 				E54E481F24828FDF006B39C9 /* IDLFactoryDesignPatternShowCase.m in Sources */,
+				E50A8B6524865A8100B8D92D /* IDLAdapter.m in Sources */,
 				E51115122483769000BDB836 /* IDLBuilderDesignPatternShowCase.m in Sources */,
 				E51114F82483478D00BDB836 /* IDLAbstractFactoryDesignPatternShowCase.m in Sources */,
 				E54E481224828CE6006B39C9 /* IDLHPPCFactory.m in Sources */,
