@@ -550,7 +550,6 @@ shapeCopy
  
 */
 
-
 class SingletonObject {
     
     static let shared:SingletonObject = SingletonObject()
@@ -581,6 +580,45 @@ extension Singleton:NSCopying {
 }
 
 print(Singleton.shared === Singleton.shared)
+
+/**
+ 
+ Adapter  Design Pattern
+ 
+*/
+
+//这个是目标接口用于限制适配器
+protocol Target {
+    func getDataWithJsonFormat() -> String
+}
+
+
+class Adaptee {
+    //待转换的不适用的接口
+    func getDataWithXMLFormat() -> String {
+        return "<xml>This is XML format Data</xml>"
+    }
+}
+
+//适配器实现目标接口，目标接口通过被代理对象提供的各项服务，创建出目标接口的数据
+class Adapter:Target {
+    
+    let adaptee:Adaptee
+    
+    init(adaptee:Adaptee) {
+        self.adaptee = adaptee
+    }
+    
+    func getDataWithJsonFormat() -> String {
+        print("Data before transform :" + adaptee.getDataWithXMLFormat() + "\n")
+        return "{ data: This is Json format Data}"
+    }
+    
+}
+
+//客户调用的是适配器对象
+let adapter = Adapter(adaptee: Adaptee())
+print(adapter.getDataWithJsonFormat())
 
 
 
