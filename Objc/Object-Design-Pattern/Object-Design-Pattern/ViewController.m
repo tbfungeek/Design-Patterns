@@ -22,6 +22,9 @@
 //Prototype Design Pattern
 #import "IDLPrototypeDesignPatternShowCase.h"
 
+//Singleton Design Pattern
+#import "IDLSingletonDesignPatternShowCase.h"
+
 @interface ViewController ()
 
 @end
@@ -42,6 +45,9 @@
     
     IDLPrototypeDesignPatternShowCase *prototypeDesignPatternShowCase = [IDLPrototypeDesignPatternShowCase new];
     [prototypeDesignPatternShowCase showCase];
+    
+    IDLSingletonDesignPatternShowCase *singletonDesignPatternShowCase = [IDLSingletonDesignPatternShowCase new];
+    [singletonDesignPatternShowCase showCase];
 }
 
 
