@@ -774,6 +774,90 @@ proxy.request(url: "https://www.baidu.com", userProfile: Profile(nickname: "tbfu
 proxy.request(url: "https://www.baidu.com", userProfile: profile)
 
 
+/**
+ 
+ Wrapper Design Pattern
+ 
+*/
+
+protocol DataSource {
+    func writeData(data:String)
+    func readData() -> String
+}
+
+class FileDataSource:DataSource {
+    
+    let fileName:String
+    init(fileName:String) {
+        self.fileName = fileName
+    }
+    
+    func writeData(data: String) {
+        print("Write data to " + self.fileName)
+    }
+    
+    func readData() -> String {
+        return "data from file "+self.fileName
+    }
+}
+
+class DataSourceWrapper:DataSource {
+    
+    let wrappee:DataSource
+    init(wrappee:DataSource) {
+        self.wrappee = wrappee
+    }
+    
+    func writeData(data: String) {
+        wrappee.writeData(data: data)
+    }
+    
+    func readData() -> String {
+        return wrappee.readData()
+    }
+}
+
+class EncryptionWrapper:DataSourceWrapper {
+    
+    override func writeData(data: String) {
+        print("加密数据")
+        super.writeData(data: data)
+    }
+    
+    override func readData() -> String {
+        print("解密数据")
+        return super.readData()
+    }
+}
+
+
+class CompressionWrapper:DataSourceWrapper {
+    
+    override func writeData(data: String) {
+        print("压缩数据")
+        super.writeData(data: data)
+    }
+    
+    override func readData() -> String {
+        print("解压数据")
+        return super.readData()
+    }
+    
+}
+
+let fileDataSource = FileDataSource(fileName: "text.txt")
+
+let encryDataSource = EncryptionWrapper(wrappee: fileDataSource)
+encryDataSource.writeData(data: "写入测试数据")
+print(encryDataSource.readData())
+
+let compressDataSource = CompressionWrapper(wrappee: fileDataSource)
+compressDataSource.writeData(data: "写入测试数据")
+print(compressDataSource.readData())
+
+
+
+
 
 
 
