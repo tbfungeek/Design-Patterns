@@ -856,6 +856,162 @@ compressDataSource.writeData(data: "写入测试数据")
 print(compressDataSource.readData())
 
 
+/**
+ 
+ Bridge Design Pattern
+ 
+*/
+
+protocol RemoteProtocol {
+    func togglePower()
+    func volumUp()
+    func volumDown()
+    func channelUp()
+    func channelDown()
+    func currentState() -> String
+}
+
+
+protocol DeviceProtocol {
+    func isEnabled() -> Bool
+    func enable()
+    func disable()
+    func getVolume() -> Float
+    func setVolume(volume:Float)
+    func getChannel() -> Int
+    func setChannel(channel:Int)
+    func deviceName() -> String
+}
+
+class Remote:RemoteProtocol {
+    
+    let device:DeviceProtocol
+    init(device:DeviceProtocol) {
+        self.device = device
+    }
+    
+    func togglePower() {
+        
+        if device.isEnabled() {
+            device.disable()
+        } else {
+            device.enable()
+        }
+    }
+    
+    func volumUp() {
+        
+        if !device.isEnabled() {
+            return
+        }
+        device.setVolume(volume: device.getVolume() + 1)
+    }
+    
+    func volumDown() {
+        
+        if !device.isEnabled() {
+            return
+        }
+        device.setVolume(volume:device.getVolume() - 1 < 0 ? 0:device.getVolume() - 1)
+    }
+    
+    func channelUp() {
+        if !device.isEnabled() {
+            return
+        }
+        device.setChannel(channel: device.getChannel() + 1)
+    }
+    
+    func channelDown() {
+        if !device.isEnabled() {
+            return
+        }
+        device.setChannel(channel: device.getChannel() - 1 < 0 ? 0:device.getChannel() - 1)
+    }
+    
+    func currentState() -> String {
+        return self.device.deviceName()+" Volume: \(self.device.getVolume()) Channel: \(self.device.getChannel())"
+    }
+    
+}
+
+class Device:DeviceProtocol {
+    
+    var status:Bool = false
+    var volume:Float = 0.0
+    var channel:Int = 0
+    
+    func isEnabled() -> Bool {
+        return self.status
+    }
+    
+    func enable() {
+        self.status = true
+    }
+    
+    func disable() {
+        self.status = false
+    }
+    
+    func getVolume() -> Float {
+        return self.volume
+    }
+    
+    func setVolume(volume: Float) {
+        self.volume = volume
+    }
+    
+    func getChannel() -> Int {
+        return self.channel
+    }
+    
+    func setChannel(channel: Int) {
+        self.channel = channel
+    }
+    
+    func deviceName() -> String {
+        return ""
+    }
+}
+
+class Radio:Device {
+    
+    override func deviceName() -> String {
+        return "Radio"
+    }
+    
+}
+
+class TV:Device {
+    
+    override func deviceName() -> String {
+        return "TV"
+    }
+}
+
+let radioRemote = Remote(device: Radio())
+radioRemote.togglePower()
+radioRemote.volumUp()
+radioRemote.volumUp()
+radioRemote.volumUp()
+radioRemote.volumUp()
+radioRemote.channelDown()
+radioRemote.channelDown()
+radioRemote.channelDown()
+print(radioRemote.currentState())
+
+let tvRemote = Remote(device: TV())
+tvRemote.togglePower()
+tvRemote.volumUp()
+tvRemote.volumUp()
+tvRemote.channelUp()
+tvRemote.channelUp()
+tvRemote.channelUp()
+tvRemote.channelDown()
+print(tvRemote.currentState())
+
+
+
 
 
 

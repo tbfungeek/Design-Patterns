@@ -37,6 +37,9 @@
 //Wrapper Design Pattern
 #import "IDLWrapperDesignPatternShowCase.h"
 
+//Bridge Design Pattern
+#import "IDLBridgeDesignPatternShowCase.h"
+
 @interface ViewController ()
 
 @end
@@ -72,6 +75,9 @@
     
     IDLWrapperDesignPatternShowCase *wrapperDesignPatternShowCase = [IDLWrapperDesignPatternShowCase new];
     [wrapperDesignPatternShowCase showCase];
+    
+    IDLBridgeDesignPatternShowCase *bridgeDesignPatternShowCase = [IDLBridgeDesignPatternShowCase new];
+    [bridgeDesignPatternShowCase showCase];
 }
 
 
