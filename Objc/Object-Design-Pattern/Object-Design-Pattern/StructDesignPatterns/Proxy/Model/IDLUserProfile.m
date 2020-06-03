@@ -6,9 +6,17 @@
 //  Copyright © 2020 linxiaohai. All rights reserved.
 //
 
-#import "UserProfile.h"
+#import "IDLUserProfile.h"
 
-@implementation UserProfile
+@interface IDLUserProfile ()
+
+@property(nonatomic, strong, readwrite) NSString *nickName;
+
+@property(nonatomic, strong, readwrite) NSString *accessToken;
+
+@end
+
+@implementation IDLUserProfile
 
 #pragma mark Initializer
 

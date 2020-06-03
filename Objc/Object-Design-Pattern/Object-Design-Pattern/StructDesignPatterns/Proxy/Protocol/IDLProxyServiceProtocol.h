@@ -8,11 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+//model
+#import "IDLUserProfile.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol IDLProxyServiceProtocol <NSObject>
 
-- (BOOL)requestWithUrl:(NSString *)url userProfile:()
+- (BOOL)requestWithUrl:(NSString *)url userProfile:(IDLUserProfile *)userProfile;
 
 @end
 

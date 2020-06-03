@@ -10,11 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UserProfile : NSObject
+@interface IDLUserProfile : NSObject
 
-@property(nonatomic, strong, readwrite) NSString *nickName;
+@property(nonatomic, strong, readonly) NSString *nickName;
 
-@property(nonatomic, strong, readwrite) NSString *accessToken;
+@property(nonatomic, strong, readonly) NSString *accessToken;
 
 - (instancetype)initWithNickName:(NSString *)nickName accessToken:(NSString *)accessToken;
 
