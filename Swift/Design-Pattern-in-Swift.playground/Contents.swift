@@ -700,6 +700,13 @@ extension Facade:NSCopying {
 Facade.shared.drawPicOne()
 Facade.shared.drawPicTwo()
 
+/**
+ 
+ Proxy Design Pattern
+ 
+*/
+
+
 
 
 
