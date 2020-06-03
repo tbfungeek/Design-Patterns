@@ -767,15 +767,10 @@ class ProxySubject:ServiceProtocol {
 }
 
 let realSubject = RealSubject()
-
 let proxy = ProxySubject(realSubject: realSubject)
-
 let profile = Profile(nickname: "tbfungeek", accessToken: "123456")
-
 proxy.request(url: "https://www.bilibili.com", userProfile: profile)
-
 proxy.request(url: "https://www.baidu.com", userProfile: Profile(nickname: "tbfungeek", accessToken: ""))
-
 proxy.request(url: "https://www.baidu.com", userProfile: profile)
 
 
