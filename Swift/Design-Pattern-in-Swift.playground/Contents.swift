@@ -706,6 +706,77 @@ Facade.shared.drawPicTwo()
  
 */
 
+protocol ServiceProtocol {
+    func request(url:String, userProfile:Profile) -> Bool
+}
+
+class RealSubject:ServiceProtocol {
+    
+    func request(url: String,userProfile:Profile) -> Bool {
+        print(userProfile.nickname + " 访问 " + url + " ...... ")
+        return true
+    }
+}
+
+struct Profile {
+    var nickname:String = ""
+    var accessToken = ""
+}
+
+class ProxySubject:ServiceProtocol {
+    
+    var realSubject:ServiceProtocol
+    
+    init(realSubject:ServiceProtocol) {
+        self.realSubject = realSubject
+    }
+    
+    var accessableUrl:Array<String> = [
+        "https://www.baidu.com",
+        "https://www.google.com",
+        "https://www.youtu.com"
+    ]
+    
+    func request(url: String, userProfile:Profile) -> Bool {
+        if !checkAccessable(url: url, userProfile: userProfile) {
+            return false
+        }
+        realSubject.request(url: url, userProfile: userProfile)
+        return true
+    }
+    
+    private func checkAccessable(url:String, userProfile:Profile) -> Bool {
+        
+        guard !url.isEmpty else {
+            print("url cannot be empty")
+            return false
+        }
+        
+        if (!accessableUrl.contains(url)) {
+            print("you has not permission to access this web site")
+            return false
+        }
+        
+        if (userProfile.accessToken.isEmpty) {
+            print("you accessToken is unavaiable, please re login")
+            return false
+        }
+        
+        return true
+    }
+}
+
+let realSubject = RealSubject()
+
+let proxy = ProxySubject(realSubject: realSubject)
+
+let profile = Profile(nickname: "tbfungeek", accessToken: "123456")
+
+proxy.request(url: "https://www.bilibili.com", userProfile: profile)
+
+proxy.request(url: "https://www.baidu.com", userProfile: Profile(nickname: "tbfungeek", accessToken: ""))
+
+proxy.request(url: "https://www.baidu.com", userProfile: profile)
 
 
 
