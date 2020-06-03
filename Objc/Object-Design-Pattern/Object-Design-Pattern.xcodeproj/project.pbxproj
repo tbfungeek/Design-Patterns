@@ -24,6 +24,10 @@
 		E50A8B722487429800B8D92D /* IDLRealSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = E50A8B712487429800B8D92D /* IDLRealSubject.m */; };
 		E50A8B75248744A400B8D92D /* IDLProxySubject.m in Sources */ = {isa = PBXBuildFile; fileRef = E50A8B74248744A300B8D92D /* IDLProxySubject.m */; };
 		E50A8B79248746B100B8D92D /* IDLProxyDesignPatternShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E50A8B78248746B100B8D92D /* IDLProxyDesignPatternShowCase.m */; };
+		E50A8BA62487D6BD00B8D92D /* IDLFileDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E50A8BA52487D6BD00B8D92D /* IDLFileDataSource.m */; };
+		E50A8BA92487D9B600B8D92D /* IDLEncrptionDataWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E50A8BA82487D9B600B8D92D /* IDLEncrptionDataWrapper.m */; };
+		E50A8BAD2487D9D600B8D92D /* IDLCompressionDataWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E50A8BAC2487D9D600B8D92D /* IDLCompressionDataWrapper.m */; };
+		E50A8BB12487DBC000B8D92D /* IDLWrapperDesignPatternShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E50A8BB02487DBC000B8D92D /* IDLWrapperDesignPatternShowCase.m */; };
 		E51114CE24833EF300BDB836 /* IDLDellPCScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = E51114CD24833EF300BDB836 /* IDLDellPCScreen.m */; };
 		E51114D124833F9400BDB836 /* IDLDellPCKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = E51114D024833F9400BDB836 /* IDLDellPCKeyboard.m */; };
 		E51114D42483401F00BDB836 /* IDLDellPCMemery.m in Sources */ = {isa = PBXBuildFile; fileRef = E51114D32483401F00BDB836 /* IDLDellPCMemery.m */; };
@@ -96,6 +100,15 @@
 		E50A8B74248744A300B8D92D /* IDLProxySubject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLProxySubject.m; sourceTree = "<group>"; };
 		E50A8B77248746B100B8D92D /* IDLProxyDesignPatternShowCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLProxyDesignPatternShowCase.h; sourceTree = "<group>"; };
 		E50A8B78248746B100B8D92D /* IDLProxyDesignPatternShowCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLProxyDesignPatternShowCase.m; sourceTree = "<group>"; };
+		E50A8BA12487D66C00B8D92D /* IDLDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLDataSource.h; sourceTree = "<group>"; };
+		E50A8BA42487D6BD00B8D92D /* IDLFileDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLFileDataSource.h; sourceTree = "<group>"; };
+		E50A8BA52487D6BD00B8D92D /* IDLFileDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLFileDataSource.m; sourceTree = "<group>"; };
+		E50A8BA72487D9B600B8D92D /* IDLEncrptionDataWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLEncrptionDataWrapper.h; sourceTree = "<group>"; };
+		E50A8BA82487D9B600B8D92D /* IDLEncrptionDataWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLEncrptionDataWrapper.m; sourceTree = "<group>"; };
+		E50A8BAB2487D9D600B8D92D /* IDLCompressionDataWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLCompressionDataWrapper.h; sourceTree = "<group>"; };
+		E50A8BAC2487D9D600B8D92D /* IDLCompressionDataWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLCompressionDataWrapper.m; sourceTree = "<group>"; };
+		E50A8BAF2487DBC000B8D92D /* IDLWrapperDesignPatternShowCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLWrapperDesignPatternShowCase.h; sourceTree = "<group>"; };
+		E50A8BB02487DBC000B8D92D /* IDLWrapperDesignPatternShowCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLWrapperDesignPatternShowCase.m; sourceTree = "<group>"; };
 		E51114CA24833D0B00BDB836 /* IDLPCComponentProtocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLPCComponentProtocal.h; sourceTree = "<group>"; };
 		E51114CB24833DCB00BDB836 /* IDLPCDeviceFactoryProtocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLPCDeviceFactoryProtocal.h; sourceTree = "<group>"; };
 		E51114CC24833EF300BDB836 /* IDLDellPCScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLDellPCScreen.h; sourceTree = "<group>"; };
@@ -293,6 +306,7 @@
 		E50A8B5F2486594800B8D92D /* StructDesignPatterns */ = {
 			isa = PBXGroup;
 			children = (
+				E50A8BA02487D64100B8D92D /* Wrapper */,
 				DA2606572487332E00E128D0 /* Proxy */,
 				DA2606432486B32800E128D0 /* Facade */,
 				E50A8B602486596100B8D92D /* Adapter */,
@@ -335,6 +349,54 @@
 			children = (
 				E50A8B77248746B100B8D92D /* IDLProxyDesignPatternShowCase.h */,
 				E50A8B78248746B100B8D92D /* IDLProxyDesignPatternShowCase.m */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		E50A8BA02487D64100B8D92D /* Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				E50A8BAE2487DB9000B8D92D /* Client */,
+				E50A8BAA2487D9BB00B8D92D /* Wrapper */,
+				E50A8BA32487D68E00B8D92D /* Wrappee */,
+				E50A8BA22487D67000B8D92D /* Protocol */,
+			);
+			path = Wrapper;
+			sourceTree = "<group>";
+		};
+		E50A8BA22487D67000B8D92D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				E50A8BA12487D66C00B8D92D /* IDLDataSource.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		E50A8BA32487D68E00B8D92D /* Wrappee */ = {
+			isa = PBXGroup;
+			children = (
+				E50A8BA42487D6BD00B8D92D /* IDLFileDataSource.h */,
+				E50A8BA52487D6BD00B8D92D /* IDLFileDataSource.m */,
+			);
+			path = Wrappee;
+			sourceTree = "<group>";
+		};
+		E50A8BAA2487D9BB00B8D92D /* Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				E50A8BA72487D9B600B8D92D /* IDLEncrptionDataWrapper.h */,
+				E50A8BA82487D9B600B8D92D /* IDLEncrptionDataWrapper.m */,
+				E50A8BAB2487D9D600B8D92D /* IDLCompressionDataWrapper.h */,
+				E50A8BAC2487D9D600B8D92D /* IDLCompressionDataWrapper.m */,
+			);
+			path = Wrapper;
+			sourceTree = "<group>";
+		};
+		E50A8BAE2487DB9000B8D92D /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				E50A8BAF2487DBC000B8D92D /* IDLWrapperDesignPatternShowCase.h */,
+				E50A8BB02487DBC000B8D92D /* IDLWrapperDesignPatternShowCase.m */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -688,6 +750,7 @@
 				E51114E82483423300BDB836 /* IDLAppleHostDevice.m in Sources */,
 				DA26063E2485D6FC00E128D0 /* IDLComplexObject.m in Sources */,
 				E54E47EF248288F3006B39C9 /* ViewController.m in Sources */,
+				E50A8BA92487D9B600B8D92D /* IDLEncrptionDataWrapper.m in Sources */,
 				E54E480C24828BFE006B39C9 /* IDLIBMPCDevice.m in Sources */,
 				E51114D72483409F00BDB836 /* IDLDellHostDevice.m in Sources */,
 				E511150E2483754700BDB836 /* IDLHouseDirector.m in Sources */,
@@ -700,6 +763,9 @@
 				E54E480924828B4A006B39C9 /* IDLHPPCDevice.m in Sources */,
 				E51114D42483401F00BDB836 /* IDLDellPCMemery.m in Sources */,
 				E54E47FA248288F9006B39C9 /* main.m in Sources */,
+				E50A8BB12487DBC000B8D92D /* IDLWrapperDesignPatternShowCase.m in Sources */,
+				E50A8BAD2487D9D600B8D92D /* IDLCompressionDataWrapper.m in Sources */,
+				E50A8BA62487D6BD00B8D92D /* IDLFileDataSource.m in Sources */,
 				DA2606422485D86100E128D0 /* IDLPrototypeDesignPatternShowCase.m in Sources */,
 				E50A8B5A248643BE00B8D92D /* IDLSingletonObject.m in Sources */,
 				E50A8B722487429800B8D92D /* IDLRealSubject.m in Sources */,

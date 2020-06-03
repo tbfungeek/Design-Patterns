@@ -31,8 +31,11 @@
 //Facade Design Pattern
 #import "IDLFacadeDesignPatternShowCase.h"
 
-//Proxy
+//Proxy Design Pattern
 #import "IDLProxyDesignPatternShowCase.h"
+
+//Wrapper Design Pattern
+#import "IDLWrapperDesignPatternShowCase.h"
 
 @interface ViewController ()
 
@@ -66,6 +69,9 @@
     
     IDLProxyDesignPatternShowCase *proxyDesignPatternShowCase = [IDLProxyDesignPatternShowCase new];
     [proxyDesignPatternShowCase showCase];
+    
+    IDLWrapperDesignPatternShowCase *wrapperDesignPatternShowCase = [IDLWrapperDesignPatternShowCase new];
+    [wrapperDesignPatternShowCase showCase];
 }
 
 
