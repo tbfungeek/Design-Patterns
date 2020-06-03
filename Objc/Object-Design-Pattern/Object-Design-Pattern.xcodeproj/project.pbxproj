@@ -15,6 +15,7 @@
 		DA26064E2486BD1B00E128D0 /* IDLRectDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = DA26064D2486BD1B00E128D0 /* IDLRectDrawer.m */; };
 		DA2606522486BD8600E128D0 /* IDLFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2606512486BD8600E128D0 /* IDLFacade.m */; };
 		DA2606562486BF3E00E128D0 /* IDLFacadeDesignPatternShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2606552486BF3E00E128D0 /* IDLFacadeDesignPatternShowCase.m */; };
+		DA26065D2487339E00E128D0 /* UserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = DA26065C2487339E00E128D0 /* UserProfile.m */; };
 		E50A8B5A248643BE00B8D92D /* IDLSingletonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E50A8B59248643BE00B8D92D /* IDLSingletonObject.m */; };
 		E50A8B5E2486445800B8D92D /* IDLSingletonDesignPatternShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E50A8B5D2486445800B8D92D /* IDLSingletonDesignPatternShowCase.m */; };
 		E50A8B6524865A8100B8D92D /* IDLAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = E50A8B6424865A8100B8D92D /* IDLAdapter.m */; };
@@ -72,6 +73,9 @@
 		DA2606512486BD8600E128D0 /* IDLFacade.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLFacade.m; sourceTree = "<group>"; };
 		DA2606542486BF3E00E128D0 /* IDLFacadeDesignPatternShowCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLFacadeDesignPatternShowCase.h; sourceTree = "<group>"; };
 		DA2606552486BF3E00E128D0 /* IDLFacadeDesignPatternShowCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLFacadeDesignPatternShowCase.m; sourceTree = "<group>"; };
+		DA2606592487335B00E128D0 /* IDLProxyServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLProxyServiceProtocol.h; sourceTree = "<group>"; };
+		DA26065B2487339E00E128D0 /* UserProfile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserProfile.h; sourceTree = "<group>"; };
+		DA26065C2487339E00E128D0 /* UserProfile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserProfile.m; sourceTree = "<group>"; };
 		E50A8B58248643BE00B8D92D /* IDLSingletonObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLSingletonObject.h; sourceTree = "<group>"; };
 		E50A8B59248643BE00B8D92D /* IDLSingletonObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLSingletonObject.m; sourceTree = "<group>"; };
 		E50A8B5C2486445800B8D92D /* IDLSingletonDesignPatternShowCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLSingletonDesignPatternShowCase.h; sourceTree = "<group>"; };
@@ -227,6 +231,32 @@
 			path = Client;
 			sourceTree = "<group>";
 		};
+		DA2606572487332E00E128D0 /* Proxy */ = {
+			isa = PBXGroup;
+			children = (
+				DA26065A2487338B00E128D0 /* Model */,
+				DA2606582487333800E128D0 /* Protocol */,
+			);
+			path = Proxy;
+			sourceTree = "<group>";
+		};
+		DA2606582487333800E128D0 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				DA2606592487335B00E128D0 /* IDLProxyServiceProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		DA26065A2487338B00E128D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA26065B2487339E00E128D0 /* UserProfile.h */,
+				DA26065C2487339E00E128D0 /* UserProfile.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E50A8B57248642C000B8D92D /* Singleton */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +279,7 @@
 		E50A8B5F2486594800B8D92D /* StructDesignPatterns */ = {
 			isa = PBXGroup;
 			children = (
+				DA2606572487332E00E128D0 /* Proxy */,
 				DA2606432486B32800E128D0 /* Facade */,
 				E50A8B602486596100B8D92D /* Adapter */,
 			);
@@ -662,6 +693,7 @@
 				E51114F82483478D00BDB836 /* IDLAbstractFactoryDesignPatternShowCase.m in Sources */,
 				E54E481224828CE6006B39C9 /* IDLHPPCFactory.m in Sources */,
 				DA26063B2485D62900E128D0 /* IDLCustomModel.m in Sources */,
+				DA26065D2487339E00E128D0 /* UserProfile.m in Sources */,
 				DA2606482486BCFB00E128D0 /* IDLLineDrawer.m in Sources */,
 				E511150324836D1C00BDB836 /* IDLHouse.m in Sources */,
 				E51114DF2483414700BDB836 /* IDLApplePCScreen.m in Sources */,
