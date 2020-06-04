@@ -1010,6 +1010,94 @@ tvRemote.channelUp()
 tvRemote.channelDown()
 print(tvRemote.currentState())
 
+/**
+ 
+ Component Design Pattern
+ 
+*/
+
+protocol Component {
+    func getPrice() -> Int
+}
+
+
+class BasicGoods:Component {
+    
+    let price:Int
+    init(price:Int) {
+        self.price = price
+    }
+    
+    func getPrice() -> Int {
+        return self.price
+    }
+    
+}
+
+class GoodsPackge:Component {
+    
+    var childGoods:Array<Component>
+    
+    init() {
+        self.childGoods = []
+    }
+    
+    func addGood(good:Component) {
+        self.childGoods.append(good)
+    }
+    
+    func removeGood(good:Component) {
+        if self.childGoods.count > 0 {
+            self.childGoods.removeLast()
+        }
+    }
+    
+    func goodsCount() -> Int {
+        return self.childGoods.count
+    }
+    
+    func getPrice() -> Int {
+        
+        var totalPrice = 0
+        for goods in self.childGoods {
+            totalPrice += goods.getPrice()
+        }
+        return totalPrice
+    }
+}
+
+
+let baseGood1:Component = BasicGoods(price: 5)
+let baseGood2:Component = BasicGoods(price: 6)
+let baseGood3:Component = BasicGoods(price: 7)
+let baseGood4:Component = BasicGoods(price: 8)
+let baseGood5:Component = BasicGoods(price: 9)
+let baseGood6:Component = BasicGoods(price: 10)
+
+let goodPackage = GoodsPackge()
+goodPackage.addGood(good: BasicGoods(price: 1))
+goodPackage.addGood(good: BasicGoods(price: 2))
+goodPackage.addGood(good: BasicGoods(price: 3))
+goodPackage.addGood(good: BasicGoods(price: 4))
+
+let goodsComponnet:Component = goodPackage
+
+var totalGoodComponents:Array<Component> = []
+totalGoodComponents.append(baseGood1)
+totalGoodComponents.append(baseGood2)
+totalGoodComponents.append(baseGood3)
+totalGoodComponents.append(baseGood4)
+totalGoodComponents.append(baseGood5)
+totalGoodComponents.append(baseGood6)
+totalGoodComponents.append(goodPackage)
+
+var totalPrice = 0
+for good in totalGoodComponents {
+    totalPrice += good.getPrice()
+}
+print(totalPrice)
+
+
 
 
 
