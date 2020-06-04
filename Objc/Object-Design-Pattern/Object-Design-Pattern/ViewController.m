@@ -40,6 +40,9 @@
 //Bridge Design Pattern
 #import "IDLBridgeDesignPatternShowCase.h"
 
+//Composite Design Pattern
+#import "IDLCompositeDesignPatternShowCase.h"
+
 @interface ViewController ()
 
 @end
@@ -78,6 +81,9 @@
     
     IDLBridgeDesignPatternShowCase *bridgeDesignPatternShowCase = [IDLBridgeDesignPatternShowCase new];
     [bridgeDesignPatternShowCase showCase];
+    
+    IDLCompositeDesignPatternShowCase *compositeDesignPatterShowCase = [IDLCompositeDesignPatternShowCase new];
+    [compositeDesignPatterShowCase showCase];
 }
 
 
