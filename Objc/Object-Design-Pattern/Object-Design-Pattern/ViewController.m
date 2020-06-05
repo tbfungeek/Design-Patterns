@@ -43,6 +43,9 @@
 //Composite Design Pattern
 #import "IDLCompositeDesignPatternShowCase.h"
 
+//FlyWeight Design Pattern
+#import "IDLFlyWeightDesignPatternShowCase.h"
+
 @interface ViewController ()
 
 @end
@@ -84,6 +87,10 @@
     
     IDLCompositeDesignPatternShowCase *compositeDesignPatterShowCase = [IDLCompositeDesignPatternShowCase new];
     [compositeDesignPatterShowCase showCase];
+    
+
+    IDLFlyWeightDesignPatternShowCase *flyWeightDesignPatternShowCase = [IDLFlyWeightDesignPatternShowCase new];
+    [flyWeightDesignPatternShowCase showCase];
 }
 
 

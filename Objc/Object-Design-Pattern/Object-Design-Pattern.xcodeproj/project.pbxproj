@@ -16,6 +16,13 @@
 		DA2606522486BD8600E128D0 /* IDLFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2606512486BD8600E128D0 /* IDLFacade.m */; };
 		DA2606562486BF3E00E128D0 /* IDLFacadeDesignPatternShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2606552486BF3E00E128D0 /* IDLFacadeDesignPatternShowCase.m */; };
 		DA26065D2487339E00E128D0 /* IDLUserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = DA26065C2487339E00E128D0 /* IDLUserProfile.m */; };
+		DA38AD2A248AC198004A65D0 /* IDLMonsterTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38AD29248AC198004A65D0 /* IDLMonsterTexture.m */; };
+		DA38AD2D248AC202004A65D0 /* IDLBulletTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38AD2C248AC202004A65D0 /* IDLBulletTexture.m */; };
+		DA38AD30248AC22F004A65D0 /* IDLTextureFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38AD2F248AC22F004A65D0 /* IDLTextureFactory.m */; };
+		DA38AD37248AC610004A65D0 /* IDLMonster.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38AD36248AC610004A65D0 /* IDLMonster.m */; };
+		DA38AD3A248AC63A004A65D0 /* IDLBullet.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38AD39248AC63A004A65D0 /* IDLBullet.m */; };
+		DA38AD3D248AC65D004A65D0 /* IDLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38AD3C248AC65D004A65D0 /* IDLObject.m */; };
+		DA38AD41248AC8E8004A65D0 /* IDLFlyWeightDesignPatternShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38AD40248AC8E8004A65D0 /* IDLFlyWeightDesignPatternShowCase.m */; };
 		DA5FE9972488157400154D9F /* IDLBridgeDesignPatternShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5FE9962488157400154D9F /* IDLBridgeDesignPatternShowCase.m */; };
 		DA5FE99E2488811F00154D9F /* IDLBasicGoods.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5FE99D2488811F00154D9F /* IDLBasicGoods.m */; };
 		DA5FE9A1248881CD00154D9F /* IDLGoodPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5FE9A0248881CD00154D9F /* IDLGoodPackage.m */; };
@@ -91,6 +98,23 @@
 		DA2606592487335B00E128D0 /* IDLProxyServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLProxyServiceProtocol.h; sourceTree = "<group>"; };
 		DA26065B2487339E00E128D0 /* IDLUserProfile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLUserProfile.h; sourceTree = "<group>"; };
 		DA26065C2487339E00E128D0 /* IDLUserProfile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLUserProfile.m; sourceTree = "<group>"; };
+		DA38AD26248AC142004A65D0 /* IDLTextureProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLTextureProtocol.h; sourceTree = "<group>"; };
+		DA38AD28248AC198004A65D0 /* IDLMonsterTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLMonsterTexture.h; sourceTree = "<group>"; };
+		DA38AD29248AC198004A65D0 /* IDLMonsterTexture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLMonsterTexture.m; sourceTree = "<group>"; };
+		DA38AD2B248AC202004A65D0 /* IDLBulletTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLBulletTexture.h; sourceTree = "<group>"; };
+		DA38AD2C248AC202004A65D0 /* IDLBulletTexture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLBulletTexture.m; sourceTree = "<group>"; };
+		DA38AD2E248AC22F004A65D0 /* IDLTextureFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLTextureFactory.h; sourceTree = "<group>"; };
+		DA38AD2F248AC22F004A65D0 /* IDLTextureFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLTextureFactory.m; sourceTree = "<group>"; };
+		DA38AD31248AC30C004A65D0 /* IDLTextureType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLTextureType.h; sourceTree = "<group>"; };
+		DA38AD34248AC598004A65D0 /* IDLObjectProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLObjectProtocol.h; sourceTree = "<group>"; };
+		DA38AD35248AC610004A65D0 /* IDLMonster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLMonster.h; sourceTree = "<group>"; };
+		DA38AD36248AC610004A65D0 /* IDLMonster.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLMonster.m; sourceTree = "<group>"; };
+		DA38AD38248AC63A004A65D0 /* IDLBullet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLBullet.h; sourceTree = "<group>"; };
+		DA38AD39248AC63A004A65D0 /* IDLBullet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLBullet.m; sourceTree = "<group>"; };
+		DA38AD3B248AC65D004A65D0 /* IDLObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLObject.h; sourceTree = "<group>"; };
+		DA38AD3C248AC65D004A65D0 /* IDLObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLObject.m; sourceTree = "<group>"; };
+		DA38AD3F248AC8E8004A65D0 /* IDLFlyWeightDesignPatternShowCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLFlyWeightDesignPatternShowCase.h; sourceTree = "<group>"; };
+		DA38AD40248AC8E8004A65D0 /* IDLFlyWeightDesignPatternShowCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLFlyWeightDesignPatternShowCase.m; sourceTree = "<group>"; };
 		DA5FE9952488157400154D9F /* IDLBridgeDesignPatternShowCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLBridgeDesignPatternShowCase.h; sourceTree = "<group>"; };
 		DA5FE9962488157400154D9F /* IDLBridgeDesignPatternShowCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLBridgeDesignPatternShowCase.m; sourceTree = "<group>"; };
 		DA5FE99A248880B000154D9F /* IDLGoodsProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLGoodsProtocol.h; sourceTree = "<group>"; };
@@ -311,6 +335,70 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		DA38AD24248AC109004A65D0 /* FlyWeight */ = {
+			isa = PBXGroup;
+			children = (
+				DA38AD3E248AC8B8004A65D0 /* Client */,
+				DA38AD32248AC575004A65D0 /* Object */,
+				DA38AD27248AC171004A65D0 /* Texture */,
+			);
+			path = FlyWeight;
+			sourceTree = "<group>";
+		};
+		DA38AD25248AC11F004A65D0 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				DA38AD26248AC142004A65D0 /* IDLTextureProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		DA38AD27248AC171004A65D0 /* Texture */ = {
+			isa = PBXGroup;
+			children = (
+				DA38AD25248AC11F004A65D0 /* Protocol */,
+				DA38AD28248AC198004A65D0 /* IDLMonsterTexture.h */,
+				DA38AD29248AC198004A65D0 /* IDLMonsterTexture.m */,
+				DA38AD2B248AC202004A65D0 /* IDLBulletTexture.h */,
+				DA38AD2C248AC202004A65D0 /* IDLBulletTexture.m */,
+				DA38AD2E248AC22F004A65D0 /* IDLTextureFactory.h */,
+				DA38AD2F248AC22F004A65D0 /* IDLTextureFactory.m */,
+				DA38AD31248AC30C004A65D0 /* IDLTextureType.h */,
+			);
+			path = Texture;
+			sourceTree = "<group>";
+		};
+		DA38AD32248AC575004A65D0 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				DA38AD33248AC57D004A65D0 /* Protocol */,
+				DA38AD35248AC610004A65D0 /* IDLMonster.h */,
+				DA38AD36248AC610004A65D0 /* IDLMonster.m */,
+				DA38AD38248AC63A004A65D0 /* IDLBullet.h */,
+				DA38AD39248AC63A004A65D0 /* IDLBullet.m */,
+				DA38AD3B248AC65D004A65D0 /* IDLObject.h */,
+				DA38AD3C248AC65D004A65D0 /* IDLObject.m */,
+			);
+			path = Object;
+			sourceTree = "<group>";
+		};
+		DA38AD33248AC57D004A65D0 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				DA38AD34248AC598004A65D0 /* IDLObjectProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		DA38AD3E248AC8B8004A65D0 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				DA38AD3F248AC8E8004A65D0 /* IDLFlyWeightDesignPatternShowCase.h */,
+				DA38AD40248AC8E8004A65D0 /* IDLFlyWeightDesignPatternShowCase.m */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
 		DA5FE9942488154800154D9F /* Client */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,6 +518,7 @@
 		E50A8B5F2486594800B8D92D /* StructDesignPatterns */ = {
 			isa = PBXGroup;
 			children = (
+				DA38AD24248AC109004A65D0 /* FlyWeight */,
 				DA5FE9982488806C00154D9F /* Composite */,
 				DAFC69EA24880E6E00131D03 /* Bridge */,
 				E50A8BA02487D64100B8D92D /* Wrapper */,
@@ -868,8 +957,10 @@
 			files = (
 				E54E481824828ED0006B39C9 /* IDLIBMPCFactory.m in Sources */,
 				E51114EB2483436100BDB836 /* IDLDellPCDeviceFactory.m in Sources */,
+				DA38AD3A248AC63A004A65D0 /* IDLBullet.m in Sources */,
 				E51114F4248346C600BDB836 /* IDLApplePCDeviceFactory.m in Sources */,
 				E51114D124833F9400BDB836 /* IDLDellPCKeyboard.m in Sources */,
+				DA38AD41248AC8E8004A65D0 /* IDLFlyWeightDesignPatternShowCase.m in Sources */,
 				E50A8B6B24865B7F00B8D92D /* IDLAdaptee.m in Sources */,
 				DA5FE9972488157400154D9F /* IDLBridgeDesignPatternShowCase.m in Sources */,
 				E51114CE24833EF300BDB836 /* IDLDellPCScreen.m in Sources */,
@@ -877,6 +968,7 @@
 				E51114E82483423300BDB836 /* IDLAppleHostDevice.m in Sources */,
 				DA5FE99E2488811F00154D9F /* IDLBasicGoods.m in Sources */,
 				DA26063E2485D6FC00E128D0 /* IDLComplexObject.m in Sources */,
+				DA38AD2D248AC202004A65D0 /* IDLBulletTexture.m in Sources */,
 				DA5FE9A52488834700154D9F /* IDLCompositeDesignPatternShowCase.m in Sources */,
 				E54E47EF248288F3006B39C9 /* ViewController.m in Sources */,
 				E50A8BA92487D9B600B8D92D /* IDLEncrptionDataWrapper.m in Sources */,
@@ -886,6 +978,7 @@
 				E51114E22483418F00BDB836 /* IDLAppleKeyboard.m in Sources */,
 				DA26064E2486BD1B00E128D0 /* IDLRectDrawer.m in Sources */,
 				E51114FB24834DED00BDB836 /* IDLApplePCFactory.m in Sources */,
+				DA38AD3D248AC65D004A65D0 /* IDLObject.m in Sources */,
 				E54E47E9248288F3006B39C9 /* AppDelegate.m in Sources */,
 				DA26064B2486BD0E00E128D0 /* IDLCircleDrawer.m in Sources */,
 				DA2606562486BF3E00E128D0 /* IDLFacadeDesignPatternShowCase.m in Sources */,
@@ -901,6 +994,7 @@
 				E50A8B722487429800B8D92D /* IDLRealSubject.m in Sources */,
 				E50A8B6F24865CCC00B8D92D /* IDLAdapterDesignPatternShowCase.m in Sources */,
 				E51114EE2483462100BDB836 /* IDLBasePCDeviceFactory.m in Sources */,
+				DA38AD37248AC610004A65D0 /* IDLMonster.m in Sources */,
 				DA5FE9A1248881CD00154D9F /* IDLGoodPackage.m in Sources */,
 				DA2606522486BD8600E128D0 /* IDLFacade.m in Sources */,
 				E51115082483713F00BDB836 /* IDLSimpleHouseBuilder.m in Sources */,
@@ -912,6 +1006,8 @@
 				E54E480F24828C56006B39C9 /* IDLApplePCDevice.m in Sources */,
 				E50A8B5E2486445800B8D92D /* IDLSingletonDesignPatternShowCase.m in Sources */,
 				E54E481F24828FDF006B39C9 /* IDLFactoryDesignPatternShowCase.m in Sources */,
+				DA38AD30248AC22F004A65D0 /* IDLTextureFactory.m in Sources */,
+				DA38AD2A248AC198004A65D0 /* IDLMonsterTexture.m in Sources */,
 				E50A8B6524865A8100B8D92D /* IDLAdapter.m in Sources */,
 				E51115122483769000BDB836 /* IDLBuilderDesignPatternShowCase.m in Sources */,
 				E51114F82483478D00BDB836 /* IDLAbstractFactoryDesignPatternShowCase.m in Sources */,
