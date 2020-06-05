@@ -1098,6 +1098,151 @@ for good in totalGoodComponents {
 print(totalPrice)
 
 
+/**
+ 
+ Flyweight  Design Pattern
+ 
+*/
+
+enum TextureType {
+    case monster,bullet
+}
+
+protocol Texture {
+    func type() -> String
+    func size() -> Int
+}
+
+/// 假设这是个怪兽的纹理，很占用资源
+struct MonsterTexture:Texture {
+    
+    func type() -> String {
+        return "MonsterTexture"
+    }
+    
+    func size() -> Int {
+        return 1000000 * 10; //10M
+    }
+    
+}
+
+/// 假设这是个子弹的纹理，很占用资源
+struct BulletTexture:Texture {
+    
+    func type() -> String {
+        return "BulletTexture"
+    }
+    
+    func size() -> Int {
+        return 1000000 * 3; //3M
+    }
+    
+}
+
+class Object {
+    var posX = 0
+    var posY = 0
+    var speed = 0
+    var texture:Texture?
+}
+
+class Monster:Object {
+    
+    init(texture:Texture) {
+        super.init()
+        self.texture = texture
+    }
+    
+    func drawMonster(x:Int,y:Int,speed:Int) {
+        self.posX = x
+        self.posY = y
+        self.speed = speed
+        
+        print("Show Monster at position with (\(self.posX),\(self.posY)) with Speed \(self.speed)")
+    }
+    
+}
+
+class Bullet:Object {
+    
+    init(texture:Texture) {
+        super.init()
+        self.texture = texture
+    }
+    
+    func drawBullet(x:Int,y:Int,speed:Int) {
+        self.posX = x
+        self.posY = y
+        self.speed = speed
+        
+        print("Show Bullet at position with (\(self.posX),\(self.posY)) with Speed \(self.speed) ")
+    }
+    
+}
+
+class TextureFactory {
+    
+    static var textures:[TextureType:Texture] = [:]
+    
+    static func textureByType(type:TextureType) -> Texture {
+        
+        if (type == .monster) {
+            if(!self.textures.keys.contains(.monster)) {
+                let monsterTexture = MonsterTexture()
+                self.textures[.monster] = monsterTexture
+                return monsterTexture;
+            } else {
+                return self.textures[.monster]!
+            }
+        } else {
+            if(!self.textures.keys.contains(.bullet)) {
+                let bulletTexture = BulletTexture()
+                self.textures[.bullet] = bulletTexture
+                return bulletTexture;
+            } else {
+                return self.textures[.bullet]!
+            }
+        }
+    }
+}
+
+var objects:Array<Object> = []
+
+for _ in 0...10 {
+    let monster:Monster = Monster(texture: TextureFactory.textureByType(type: .monster))
+    objects.append(monster)
+}
+
+for _ in 0...10 {
+    let bullet:Bullet = Bullet(texture: TextureFactory.textureByType(type: .bullet))
+    objects.append(bullet)
+}
+
+for object in objects {
+        
+    if let obj = object as? Monster {
+        obj.drawMonster(x: Int(arc4random_uniform(100)), y: Int(arc4random_uniform(100)), speed: Int(arc4random_uniform(100)))
+    }
+    
+    if let obj = object as? Bullet {
+        obj.drawBullet(x: Int(arc4random_uniform(100)), y: Int(arc4random_uniform(100)), speed: Int(arc4random_uniform(100)))
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
 
 
 
