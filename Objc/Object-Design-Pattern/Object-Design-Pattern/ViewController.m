@@ -52,6 +52,9 @@
 //Observer Design Pattern
 #import "IDLObserverDesignPatternShowCase.h"
 
+//Templete Design Pattern
+#import "IDLTempleteDesignPatternShowCase.h"
+
 @interface ViewController ()
 
 @end
@@ -103,6 +106,9 @@
     
     IDLObserverDesignPatternShowCase *observerDesignPatternShowCase = [IDLObserverDesignPatternShowCase new];
     [observerDesignPatternShowCase showCase];
+    
+    IDLTempleteDesignPatternShowCase *templeteDesignPatternShowCase = [IDLTempleteDesignPatternShowCase new];
+    [templeteDesignPatternShowCase showCase];
 }
 
 
