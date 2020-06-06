@@ -439,7 +439,7 @@
 		DA38AD42248B4F6B004A65D0 /* BehaviorDesignPatterns */ = {
 			isa = PBXGroup;
 			children = (
-				DAEA256B248BEB4E00547291 /* Client */,
+				DAEA256F248BFC9800547291 /* Templete */,
 				DAEF56BD248B603B001D0795 /* Observer */,
 				DA38AD43248B4F82004A65D0 /* Responsibility */,
 			);
@@ -513,9 +513,17 @@
 			path = Client;
 			sourceTree = "<group>";
 		};
+		DAEA256F248BFC9800547291 /* Templete */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Templete;
+			sourceTree = "<group>";
+		};
 		DAEF56BD248B603B001D0795 /* Observer */ = {
 			isa = PBXGroup;
 			children = (
+				DAEA256B248BEB4E00547291 /* Client */,
 				DAEA2564248BE78D00547291 /* IDLSubscribe.h */,
 				DAEA2565248BE78D00547291 /* IDLSubscribe.m */,
 				DAEA2567248BE79E00547291 /* IDLObserver.h */,
