@@ -430,6 +430,7 @@
 		DA38AD42248B4F6B004A65D0 /* BehaviorDesignPatterns */ = {
 			isa = PBXGroup;
 			children = (
+				DAEF56BD248B603B001D0795 /* Observer */,
 				DA38AD43248B4F82004A65D0 /* Responsibility */,
 			);
 			path = BehaviorDesignPatterns;
@@ -491,6 +492,13 @@
 				DA5FE9A42488834700154D9F /* IDLCompositeDesignPatternShowCase.m */,
 			);
 			path = Client;
+			sourceTree = "<group>";
+		};
+		DAEF56BD248B603B001D0795 /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Observer;
 			sourceTree = "<group>";
 		};
 		DAFC69EA24880E6E00131D03 /* Bridge */ = {
