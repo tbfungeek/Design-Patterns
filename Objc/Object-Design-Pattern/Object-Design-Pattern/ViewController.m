@@ -49,6 +49,9 @@
 //Responsibility Chain Design Pattern
 #import "IDLResponsibilityDesignPatternShowCase.h"
 
+//Observer Design Pattern
+#import "IDLObserverDesignPatternShowCase.h"
+
 @interface ViewController ()
 
 @end
@@ -97,6 +100,9 @@
     
     IDLResponsibilityDesignPatternShowCase *responsibilityDesignPatternShowCase = [IDLResponsibilityDesignPatternShowCase new];
     [responsibilityDesignPatternShowCase showCase];
+    
+    IDLObserverDesignPatternShowCase *observerDesignPatternShowCase = [IDLObserverDesignPatternShowCase new];
+    [observerDesignPatternShowCase showCase];
 }
 
 

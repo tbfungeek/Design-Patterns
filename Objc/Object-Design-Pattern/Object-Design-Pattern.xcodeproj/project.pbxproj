@@ -27,6 +27,9 @@
 		DA5FE99E2488811F00154D9F /* IDLBasicGoods.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5FE99D2488811F00154D9F /* IDLBasicGoods.m */; };
 		DA5FE9A1248881CD00154D9F /* IDLGoodPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5FE9A0248881CD00154D9F /* IDLGoodPackage.m */; };
 		DA5FE9A52488834700154D9F /* IDLCompositeDesignPatternShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5FE9A42488834700154D9F /* IDLCompositeDesignPatternShowCase.m */; };
+		DAEA2566248BE78D00547291 /* IDLSubscribe.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEA2565248BE78D00547291 /* IDLSubscribe.m */; };
+		DAEA2569248BE79E00547291 /* IDLObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEA2568248BE79E00547291 /* IDLObserver.m */; };
+		DAEA256E248BEB8400547291 /* IDLObserverDesignPatternShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEA256D248BEB8400547291 /* IDLObserverDesignPatternShowCase.m */; };
 		DAFC69F024880F9400131D03 /* IDLRemote.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFC69EF24880F9400131D03 /* IDLRemote.m */; };
 		DAFC69F324880FA600131D03 /* IDLDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFC69F224880FA600131D03 /* IDLDevice.m */; };
 		DAFC69F624880FBA00131D03 /* IDLRadioDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFC69F524880FBA00131D03 /* IDLRadioDevice.m */; };
@@ -133,6 +136,12 @@
 		DA5FE9A0248881CD00154D9F /* IDLGoodPackage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLGoodPackage.m; sourceTree = "<group>"; };
 		DA5FE9A32488834700154D9F /* IDLCompositeDesignPatternShowCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLCompositeDesignPatternShowCase.h; sourceTree = "<group>"; };
 		DA5FE9A42488834700154D9F /* IDLCompositeDesignPatternShowCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLCompositeDesignPatternShowCase.m; sourceTree = "<group>"; };
+		DAEA2564248BE78D00547291 /* IDLSubscribe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLSubscribe.h; sourceTree = "<group>"; };
+		DAEA2565248BE78D00547291 /* IDLSubscribe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLSubscribe.m; sourceTree = "<group>"; };
+		DAEA2567248BE79E00547291 /* IDLObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLObserver.h; sourceTree = "<group>"; };
+		DAEA2568248BE79E00547291 /* IDLObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLObserver.m; sourceTree = "<group>"; };
+		DAEA256C248BEB8400547291 /* IDLObserverDesignPatternShowCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLObserverDesignPatternShowCase.h; sourceTree = "<group>"; };
+		DAEA256D248BEB8400547291 /* IDLObserverDesignPatternShowCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLObserverDesignPatternShowCase.m; sourceTree = "<group>"; };
 		DAFC69EC24880F6A00131D03 /* IDLDeviceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLDeviceProtocol.h; sourceTree = "<group>"; };
 		DAFC69ED24880F7D00131D03 /* IDLRemoteProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLRemoteProtocol.h; sourceTree = "<group>"; };
 		DAFC69EE24880F9400131D03 /* IDLRemote.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLRemote.h; sourceTree = "<group>"; };
@@ -430,6 +439,7 @@
 		DA38AD42248B4F6B004A65D0 /* BehaviorDesignPatterns */ = {
 			isa = PBXGroup;
 			children = (
+				DAEA256B248BEB4E00547291 /* Client */,
 				DAEF56BD248B603B001D0795 /* Observer */,
 				DA38AD43248B4F82004A65D0 /* Responsibility */,
 			);
@@ -494,9 +504,22 @@
 			path = Client;
 			sourceTree = "<group>";
 		};
+		DAEA256B248BEB4E00547291 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				DAEA256C248BEB8400547291 /* IDLObserverDesignPatternShowCase.h */,
+				DAEA256D248BEB8400547291 /* IDLObserverDesignPatternShowCase.m */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
 		DAEF56BD248B603B001D0795 /* Observer */ = {
 			isa = PBXGroup;
 			children = (
+				DAEA2564248BE78D00547291 /* IDLSubscribe.h */,
+				DAEA2565248BE78D00547291 /* IDLSubscribe.m */,
+				DAEA2567248BE79E00547291 /* IDLObserver.h */,
+				DAEA2568248BE79E00547291 /* IDLObserver.m */,
 			);
 			path = Observer;
 			sourceTree = "<group>";
@@ -1067,10 +1090,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E54E481824828ED0006B39C9 /* IDLIBMPCFactory.m in Sources */,
+				DAEA256E248BEB8400547291 /* IDLObserverDesignPatternShowCase.m in Sources */,
 				E51114EB2483436100BDB836 /* IDLDellPCDeviceFactory.m in Sources */,
 				DA38AD3A248AC63A004A65D0 /* IDLBullet.m in Sources */,
 				E51114F4248346C600BDB836 /* IDLApplePCDeviceFactory.m in Sources */,
 				DAFCC840248B54D1003FD420 /* IDLHandler2.m in Sources */,
+				DAEA2569248BE79E00547291 /* IDLObserver.m in Sources */,
 				E51114D124833F9400BDB836 /* IDLDellPCKeyboard.m in Sources */,
 				DA38AD41248AC8E8004A65D0 /* IDLFlyWeightDesignPatternShowCase.m in Sources */,
 				E50A8B6B24865B7F00B8D92D /* IDLAdaptee.m in Sources */,
@@ -1138,6 +1163,7 @@
 				DA26065D2487339E00E128D0 /* IDLUserProfile.m in Sources */,
 				DA2606482486BCFB00E128D0 /* IDLLineDrawer.m in Sources */,
 				E511150324836D1C00BDB836 /* IDLHouse.m in Sources */,
+				DAEA2566248BE78D00547291 /* IDLSubscribe.m in Sources */,
 				E51114DF2483414700BDB836 /* IDLApplePCScreen.m in Sources */,
 				E54E481524828E1B006B39C9 /* IDLBasePCFactory.m in Sources */,
 			);
