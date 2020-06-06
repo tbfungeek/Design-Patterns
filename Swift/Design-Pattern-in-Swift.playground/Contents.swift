@@ -1355,3 +1355,69 @@ hander5.setNextHandler(nextHandler: defaultHandler)
 
 hander1.handleRequest(request: request404)
 hander1.handleRequest(request: request500)
+
+
+/**
+ 
+ Observer  Design Pattern
+ 
+*/
+class SubScribe {
+    
+    var observers:Array<Observer>
+    var status:Int
+    
+    init() {
+        self.observers = []
+        self.status = 0
+    }
+    
+    func registeObserver(observer:Observer) {
+        self.observers.append(observer)
+    }
+    
+    func unregisteObserver(observer:Observer) {
+        self.observers.removeAll(where: { $0 === observer })
+    }
+    
+    func setStatus(status:Int) {
+        self.status = status
+        for observer in self.observers {
+            observer.update(subscribe: self);
+        }
+    }
+    
+    func getStatus() -> Int {
+        return self.status
+    }
+}
+
+class Observer {
+    
+    var name:String
+    
+    init(name:String) {
+        self.name = name
+    }
+    
+    func update(subscribe: SubScribe) {
+        print("Message From \(self.name) Subscribe status \(subScribe.getStatus())")
+    }
+}
+
+let observer1 = Observer(name: "Observer1")
+let observer2 = Observer(name: "Observer2")
+let observer3 = Observer(name: "Observer3")
+let observer4 = Observer(name: "Observer4")
+
+let subScribe = SubScribe()
+subScribe.registeObserver(observer: observer1)
+subScribe.registeObserver(observer: observer2)
+subScribe.registeObserver(observer: observer3)
+subScribe.registeObserver(observer: observer4)
+
+subScribe.unregisteObserver(observer: observer2)
+
+subScribe.setStatus(status: 200)
+
+
