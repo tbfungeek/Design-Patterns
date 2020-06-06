@@ -1420,4 +1420,92 @@ subScribe.unregisteObserver(observer: observer2)
 
 subScribe.setStatus(status: 200)
 
+/**
+ 
+ Templete  Design Pattern
+ 
+*/
+
+class BaseTemplete {
+    
+    //固定的步骤
+    final func fixStep1() {
+        print("Fix Templete Step 1")
+    }
+    
+    //固定的步骤
+    final func fixStep2() {
+        print("Fix Templete Step 2")
+    }
+    
+    //子类可覆写的模版步骤
+    func templeteStep1() {
+        print("templete Step1 by BaseTemplete")
+    }
+    
+    //子类可覆写的模版步骤
+    func templeteStep2() {
+        print("templete Step2 by BaseTemplete")
+    }
+    
+    //模版中部分可供hook的方法
+    func hookStep1() {
+        
+    }
+    
+    //模版中部分可供hook的方法
+    func hookStep2() {
+        
+    }
+    
+    //还可以以回调方式提供
+    func templete(callback:() -> Void) {
+        fixStep1()
+        fixStep2()
+        templeteStep1()
+        hookStep1()
+        templeteStep2()
+        hookStep2()
+        callback()
+    }
+}
+
+class TempleteOne:BaseTemplete {
+    
+    override func templeteStep1() {
+        print("templete Step1 by TempleteOne")
+    }
+    
+    override func templeteStep2() {
+        print("templete Step2 by TempleteOne")
+    }
+    
+    override func hookStep1() {
+        print("hookStep1 by TempleteOne")
+    }
+    
+}
+
+class TempleteTwo:BaseTemplete {
+    
+    override func templeteStep2() {
+        print("templete Step2 by TempleteTwo")
+    }
+    
+    override func hookStep1() {
+        print("hookStep1 by TempleteTwo")
+    }
+    
+}
+
+TempleteOne().templete {
+    print("This Code is from TempleteOne CallBack")
+}
+
+
+TempleteTwo().templete {
+    print("This Code is from TempleteTwo CallBack")
+}
+
+
 
