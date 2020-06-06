@@ -451,6 +451,14 @@
 		DA38AD42248B4F6B004A65D0 /* BehaviorDesignPatterns */ = {
 			isa = PBXGroup;
 			children = (
+				DAEA2585248C064000547291 /* Interpreter */,
+				DAEA2584248C063400547291 /* Iterator */,
+				DAEA2583248C062700547291 /* Command */,
+				DAEA2582248C061700547291 /* Memento */,
+				DAEA2581248C060A00547291 /* Mediator */,
+				DAEA2580248C05ED00547291 /* State */,
+				DAEA257F248C059700547291 /* Strategy */,
+				DAEA257E248C058800547291 /* Visitor */,
 				DAEA256F248BFC9800547291 /* Templete */,
 				DAEF56BD248B603B001D0795 /* Observer */,
 				DA38AD43248B4F82004A65D0 /* Responsibility */,
@@ -554,6 +562,62 @@
 				DAEA257C248C02CF00547291 /* IDLTempleteDesignPatternShowCase.m */,
 			);
 			path = Client;
+			sourceTree = "<group>";
+		};
+		DAEA257E248C058800547291 /* Visitor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Visitor;
+			sourceTree = "<group>";
+		};
+		DAEA257F248C059700547291 /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Strategy;
+			sourceTree = "<group>";
+		};
+		DAEA2580248C05ED00547291 /* State */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		DAEA2581248C060A00547291 /* Mediator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mediator;
+			sourceTree = "<group>";
+		};
+		DAEA2582248C061700547291 /* Memento */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Memento;
+			sourceTree = "<group>";
+		};
+		DAEA2583248C062700547291 /* Command */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Command;
+			sourceTree = "<group>";
+		};
+		DAEA2584248C063400547291 /* Iterator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Iterator;
+			sourceTree = "<group>";
+		};
+		DAEA2585248C064000547291 /* Interpreter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interpreter;
 			sourceTree = "<group>";
 		};
 		DAEF56BD248B603B001D0795 /* Observer */ = {
@@ -977,7 +1041,6 @@
 			children = (
 				DA38AD42248B4F6B004A65D0 /* BehaviorDesignPatterns */,
 				E50A8B5F2486594800B8D92D /* StructDesignPatterns */,
-				E54E48202482900B006B39C9 /* IDLDesignPatternShowCase.h */,
 				E54E48002482896C006B39C9 /* CreateDesignPatterns */,
 				E54E47E7248288F3006B39C9 /* AppDelegate.h */,
 				E54E47E8248288F3006B39C9 /* AppDelegate.m */,
@@ -986,6 +1049,7 @@
 				E54E47ED248288F3006B39C9 /* ViewController.h */,
 				E54E47EE248288F3006B39C9 /* ViewController.m */,
 				E54E47F0248288F3006B39C9 /* Main.storyboard */,
+				E54E48202482900B006B39C9 /* IDLDesignPatternShowCase.h */,
 				E54E47F3248288F9006B39C9 /* Assets.xcassets */,
 				E54E47F5248288F9006B39C9 /* LaunchScreen.storyboard */,
 				E54E47F8248288F9006B39C9 /* Info.plist */,
