@@ -46,6 +46,9 @@
 //FlyWeight Design Pattern
 #import "IDLFlyWeightDesignPatternShowCase.h"
 
+//Responsibility Chain Design Pattern
+#import "IDLResponsibilityDesignPatternShowCase.h"
+
 @interface ViewController ()
 
 @end
@@ -91,6 +94,9 @@
 
     IDLFlyWeightDesignPatternShowCase *flyWeightDesignPatternShowCase = [IDLFlyWeightDesignPatternShowCase new];
     [flyWeightDesignPatternShowCase showCase];
+    
+    IDLResponsibilityDesignPatternShowCase *responsibilityDesignPatternShowCase = [IDLResponsibilityDesignPatternShowCase new];
+    [responsibilityDesignPatternShowCase showCase];
 }
 
 

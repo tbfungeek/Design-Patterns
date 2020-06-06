@@ -1229,30 +1229,129 @@ for object in objects {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
+/**
  
+ Chain of Responsibility  Design Pattern
+ 
+*/
 
+struct Request {
+    let requestCode:Int
+    
+    init(requestCode:Int) {
+        self.requestCode = requestCode
+    }
+    
+}
 
+protocol HandlerProtocol {
+    func canHandleRequest(request:Request) -> Bool
+    func setNextHandler(nextHandler:HandlerProtocol)
+    func handleRequest(request:Request)
+}
 
+class BaseHandler:HandlerProtocol {
+    
+    var nextHandler:HandlerProtocol?
+    
+    let handlerCode:Int
+    
+    init(handlerCode:Int) {
+        self.handlerCode = handlerCode
+    }
+    
+    func canHandleRequest(request: Request) -> Bool {
+        return self.handlerCode == request.requestCode
+    }
+    
+    func setNextHandler(nextHandler: HandlerProtocol) {
+        self.nextHandler = nextHandler
+    }
+    
+    func handleRequest(request: Request) {
+        
+    }
+    
+}
 
+class Handler1:BaseHandler {
+    
+    override func handleRequest(request: Request) {
+        if self.canHandleRequest(request: request) {
+            print("request had been process by Handler1")
+        } else {
+            self.nextHandler?.handleRequest(request: request)
+        }
+    }
+}
 
+class Handler2:BaseHandler {
+    
+    override func handleRequest(request: Request) {
+        if self.canHandleRequest(request: request) {
+            print("request had been process by Handler2")
+        } else {
+            self.nextHandler?.handleRequest(request: request)
+        }
+    }
+}
 
+class Handler3:BaseHandler {
+    
+    override func handleRequest(request: Request) {
+        if self.canHandleRequest(request: request) {
+            print("request had been process by Handler3")
+        } else {
+            self.nextHandler?.handleRequest(request: request)
+        }
+    }
+}
 
+class Handler4:BaseHandler {
+    
+    override func handleRequest(request: Request) {
+        if self.canHandleRequest(request: request) {
+            print("request had been process by Handler4")
+        } else {
+            self.nextHandler?.handleRequest(request: request)
+        }
+    }
+    
+}
 
+class Handler5:BaseHandler {
+    
+    override func handleRequest(request: Request) {
+        if self.canHandleRequest(request: request) {
+            print("request had been process by Handler5")
+        } else {
+            self.nextHandler?.handleRequest(request: request)
+        }
+    }
+}
 
+class DefaultHandler:BaseHandler {
+    
+    override func handleRequest(request: Request) {
+        print("request had been process by Default Handler")
+    }
+}
 
+let request404 = Request(requestCode: 404)
+let request500 = Request(requestCode: 500)
 
+let hander1 = Handler1(handlerCode: 100)
+let hander2 = Handler2(handlerCode: 102)
+let hander3 = Handler3(handlerCode: 102)
+let hander4 = Handler4(handlerCode: 404)
+let hander5 = Handler5(handlerCode: 102)
+let defaultHandler = DefaultHandler(handlerCode: 0)
 
+hander1.setNextHandler(nextHandler: hander2)
+hander2.setNextHandler(nextHandler: hander3)
+hander3.setNextHandler(nextHandler: hander4)
+hander4.setNextHandler(nextHandler: hander5)
+hander5.setNextHandler(nextHandler: defaultHandler)
 
-
-
+hander1.handleRequest(request: request404)
+hander1.handleRequest(request: request500)
