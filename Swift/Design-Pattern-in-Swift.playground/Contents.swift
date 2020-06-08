@@ -1513,7 +1513,124 @@ TempleteTwo().templete {
  
 */
 
+protocol ElementProtocol {
+    func accept(visitor:VisitorProtocol) -> String
+}
 
+class Shap:ElementProtocol {
+    
+    var centerX:Int = 0
+    var centerY:Int = 0
+    
+    init(centerX:Int,centerY:Int) {
+        self.centerX    = centerX
+        self.centerY    = centerY
+    }
+    
+    func accept(visitor: VisitorProtocol) -> String {
+        return ""
+    }
+}
 
+class DotShape:Shap {
+    
+    var centerSize:Int = 0
+    
+    init(centerX:Int,centerY:Int,centerSize:Int) {
+        super.init(centerX: centerX, centerY: centerY)
+        self.centerSize = centerSize
+    }
+    
+    override func accept(visitor: VisitorProtocol) -> String {
+        return visitor.visit(dot: self)
+    }
+    
+}
 
+class CircleShape:Shap {
+    
+    var circleRadius:Int = 0
+    
+    init(centerX:Int,centerY:Int,circleRadius:Int) {
+        super.init(centerX: centerX, centerY: centerY)
+        self.circleRadius = circleRadius
+    }
+    
+    override func accept(visitor: VisitorProtocol) -> String {
+        return visitor.visit(circle: self)
+    }
+    
+}
 
+class RectangleShape:Shap {
+    
+    var width:Int = 0
+    var height:Int = 0
+    
+    init(centerX:Int,centerY:Int,width:Int,height:Int) {
+        super.init(centerX: centerX, centerY: centerY)
+        self.width = width
+        self.height = height
+    }
+    
+    override func accept(visitor: VisitorProtocol) -> String {
+        return visitor.visit(rect: self);
+    }
+}
+
+class CompoundShape:Shap {
+    
+    var dot:DotShape?
+    var circle:CircleShape?
+    
+    init(dot:DotShape, circle:CircleShape) {
+        super.init(centerX: 0, centerY: 0)
+        self.dot = dot
+        self.circle = circle
+    }
+    
+    override func accept(visitor: VisitorProtocol) -> String {
+        return visitor.visit(compond: self)
+    }
+}
+
+protocol VisitorProtocol {
+    
+    func visit(dot:DotShape) -> String
+    func visit(circle:CircleShape) -> String
+    func visit(rect:RectangleShape) -> String
+    func visit(compond:CompoundShape) -> String
+}
+
+class Visitor:VisitorProtocol {
+    
+    func visit(dot: DotShape) -> String {
+        return "This is a dot with Center ( \(dot.centerX) : \(dot.centerY) ) dot Size = \(dot.centerSize)"
+    }
+    
+    func visit(circle: CircleShape) -> String {
+        return "This is a circle with Center ( \(circle.centerX) : \(circle.centerY) ) circle radius = \(circle.circleRadius)"
+    }
+    
+    func visit(rect: RectangleShape) -> String {
+        return "This is a rectangle with Center ( \(rect.centerX) : \(rect.centerY) ) rect width = \(rect.width) height = \(rect.height)"
+    }
+    
+    func visit(compond: CompoundShape) -> String {
+        return "This is a compond with dot \(compond.dot) and circle \(compond.circle)"
+    }
+    
+}
+
+let dot:DotShape = DotShape(centerX: 100, centerY: 100, centerSize: 2)
+let circle:CircleShape = CircleShape(centerX: 100, centerY: 100, circleRadius: 40)
+let rect:RectangleShape = RectangleShape(centerX: 300, centerY: 200, width: 100, height: 200)
+let compound:CompoundShape = CompoundShape(dot: dot, circle: circle)
+
+let shapesArray:Array<ElementProtocol> = [dot,circle,rect,compound]
+
+let visitor:Visitor = Visitor()
+
+for shape:ElementProtocol in shapesArray {
+    print(shape.accept(visitor: visitor))
+}
