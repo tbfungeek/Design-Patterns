@@ -55,6 +55,9 @@
 //Templete Design Pattern
 #import "IDLTempleteDesignPatternShowCase.h"
 
+//Visitor Design Pattern
+#import "IDLVisitorIDLDesignPatternShowCase.h"
+
 @interface ViewController ()
 
 @end
@@ -109,6 +112,9 @@
     
     IDLTempleteDesignPatternShowCase *templeteDesignPatternShowCase = [IDLTempleteDesignPatternShowCase new];
     [templeteDesignPatternShowCase showCase];
+    
+    IDLVisitorIDLDesignPatternShowCase *visitorDesignPatternShowCase = [IDLVisitorIDLDesignPatternShowCase new];
+    [visitorDesignPatternShowCase showCase];
 }
 
 
