@@ -1507,5 +1507,13 @@ TempleteTwo().templete {
     print("This Code is from TempleteTwo CallBack")
 }
 
+/**
+ 
+ Visitor Design Pattern
+ 
+*/
+
+
+
 
 
