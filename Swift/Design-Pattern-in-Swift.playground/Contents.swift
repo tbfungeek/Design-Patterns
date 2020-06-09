@@ -1634,3 +1634,99 @@ let visitor:Visitor = Visitor()
 for shape:ElementProtocol in shapesArray {
     print(shape.accept(visitor: visitor))
 }
+
+
+/**
+ 
+ State Design Pattern
+ 
+*/
+
+class Context {
+    
+    private var currentState:State
+    
+    init(state : State) {
+        self.currentState = state
+        transitionTo(state: state)
+    }
+    
+    func transitionTo(state:State) {
+        self.currentState = state
+        self.currentState.update(context: self)
+    }
+    
+    func request1() {
+        self.currentState.handle1()
+    }
+    
+    func request2() {
+        self.currentState.handle2()
+    }
+    
+}
+
+protocol State:class {
+    
+    func update(context: Context)
+    
+    func handle1()
+    
+    func handle2()
+}
+
+class BaseState: State {
+    
+    private (set) weak var context:Context?
+    
+    func update(context: Context) {
+        self.context = context
+    }
+    
+    func handle1() {
+        
+    }
+    
+    func handle2() {
+        
+    }
+}
+
+class ConcreteStateA: BaseState {
+    
+    override func handle1() {
+        print("This is ConcreteStateA call handle1")
+        print("Will Switch to Next State")
+        self.context?.transitionTo(state: ConcreteStateB())
+    }
+    
+    override func handle2() {
+        print("This is ConcreteStateA call handle2")
+    }
+}
+
+class ConcreteStateB: BaseState {
+    
+    override func handle1() {
+        print("This is ConcreteStateB call handle1")
+        print("Will Switch to Next State")
+        self.context?.transitionTo(state: ConcreteStateA())
+    }
+    
+    override func handle2() {
+        print("This is ConcreteStateB call handle2")
+    }
+}
+
+let stateA = ConcreteStateA()
+let stateB = ConcreteStateB()
+let context = Context(state: stateA)
+context.request1()
+context.request2()
+
+
+
+
+
+
+
