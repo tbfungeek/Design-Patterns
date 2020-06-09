@@ -58,6 +58,9 @@
 //Visitor Design Pattern
 #import "IDLVisitorIDLDesignPatternShowCase.h"
 
+//State Design Pattern
+#import "IDLStateDesignPatternShowCase.h"
+
 @interface ViewController ()
 
 @end
@@ -115,6 +118,10 @@
     
     IDLVisitorIDLDesignPatternShowCase *visitorDesignPatternShowCase = [IDLVisitorIDLDesignPatternShowCase new];
     [visitorDesignPatternShowCase showCase];
+    
+    IDLStateDesignPatternShowCase *stateDesignPatternShowCase = [IDLStateDesignPatternShowCase new];
+    [stateDesignPatternShowCase showCase];
+    
 }
 
 
