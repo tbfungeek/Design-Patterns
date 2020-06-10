@@ -2045,7 +2045,122 @@ careTaker.showState()
 careTaker.undo()
 careTaker.showState()
 
+/**
+ 
+ Iterator Design Pattern
+ 
+*/
 
+protocol IteratorProtocol {
+    func hasNext() -> Bool
+    func next() -> String?
+    func first()
+    func size() -> Int
+}
 
+class Iterator:IteratorProtocol {
+    
+    var collection:CollectionProtocol
+    var index:Int
+    
+    init(collection:CollectionProtocol) {
+        self.collection = collection
+        self.index = 0
+    }
+    
+    func hasNext() -> Bool {
+        return self.index != self.collection.size()
+    }
+    
+    func next() -> String? {
+        let value = self.collection.getItem(index: self.index)
+        self.index += 1
+        return value
+    }
+    
+    func first() {
+        self.index = 0
+    }
+    
+    func size() -> Int {
+        return self.collection.size()
+    }
+}
 
+protocol CollectionProtocol {
+    
+    func getItem(index:Int) -> String?
+    func size() -> Int
+    func iterator() -> IteratorProtocol
+}
+
+class ArrayCollectionWrapper:CollectionProtocol {
+    
+    var array:[String]
+    
+    init(array:[String]) {
+        self.array = array
+    }
+    
+    func getItem(index: Int) -> String? {
+        guard index >= 0 && index < self.array.count else {
+            return nil
+        }
+        return self.array[index]
+    }
+    
+    func size() -> Int {
+        return self.array.count
+    }
+    
+    func iterator() -> IteratorProtocol {
+        return Iterator(collection: self)
+    }
+}
+
+class ListCollectionWrapper:CollectionProtocol {
+
+    var list:Array<String>
+    
+    init(list:Array<String>) {
+        self.list = list
+    }
+    
+    func getItem(index: Int) -> String? {
+        guard index >= 0 && index < self.list.count else {
+            return nil
+        }
+        return self.list[index]
+    }
+    
+    func size() -> Int {
+        return self.list.count
+    }
+    
+    func iterator() -> IteratorProtocol {
+        return Iterator(collection: self)
+    }
+}
+
+let arrayCollection:CollectionProtocol = ArrayCollectionWrapper(array: ["A","B","C","D","E","F","G","H"])
+let arrayIterator:IteratorProtocol = arrayCollection.iterator()
+
+var list:Array<String> = []
+list.append("HAHA")
+list.append("BABA")
+list.append("DADA")
+list.append("YAYA")
+
+let listCollection:CollectionProtocol = ListCollectionWrapper(list: list)
+let listIterator:IteratorProtocol = listCollection.iterator()
+
+while arrayIterator.hasNext() {
+    print(arrayIterator.next()!)
+}
+
+while listIterator.hasNext() {
+    print(listIterator.next()!)
+}
+
+print("============This is the End of Design Pattern but may be The beginning, But Please firmly believe that you will reach SomeWhere locate in your heart and dreams! Thank you =============")
 
