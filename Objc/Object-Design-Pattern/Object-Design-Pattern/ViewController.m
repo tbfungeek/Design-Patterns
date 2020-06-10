@@ -70,6 +70,9 @@
 //Command Design Pattern
 #import "IDLCommandDesignPatternShowCase.h"
 
+//Memento Design Pattern
+#import "IDLMementoDesignPatternShowCase.h"
+
 @interface ViewController ()
 
 @end
@@ -140,6 +143,9 @@
     
     IDLCommandDesignPatternShowCase *commandDesignPatternShowCase = [IDLCommandDesignPatternShowCase new];
     [commandDesignPatternShowCase showCase];
+    
+    IDLMementoDesignPatternShowCase *mementoDesignPatternShowCase = [IDLMementoDesignPatternShowCase new];
+    [mementoDesignPatternShowCase showCase];
     
 }
 

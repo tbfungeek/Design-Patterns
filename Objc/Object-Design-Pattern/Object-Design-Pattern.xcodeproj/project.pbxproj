@@ -116,6 +116,10 @@
 		E5E093552490D17C00AC716B /* IDLComponentA.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E093542490D17C00AC716B /* IDLComponentA.m */; };
 		E5E093582490D19200AC716B /* IDLComponentB.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E093572490D19200AC716B /* IDLComponentB.m */; };
 		E5E0935C2490D27F00AC716B /* IDLMediatorDesignPatternShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E0935B2490D27F00AC716B /* IDLMediatorDesignPatternShowCase.m */; };
+		E5F4F30B2491049D00CA1653 /* IDLMemento.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F4F30A2491049D00CA1653 /* IDLMemento.m */; };
+		E5F4F30E2491062300CA1653 /* IDLOriginator.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F4F30D2491062300CA1653 /* IDLOriginator.m */; };
+		E5F4F3112491077C00CA1653 /* IDLCareTaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F4F3102491077C00CA1653 /* IDLCareTaker.m */; };
+		E5F4F3152491095C00CA1653 /* IDLMementoDesignPatternShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F4F3142491095C00CA1653 /* IDLMementoDesignPatternShowCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -357,6 +361,14 @@
 		E5E093572490D19200AC716B /* IDLComponentB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLComponentB.m; sourceTree = "<group>"; };
 		E5E0935A2490D27F00AC716B /* IDLMediatorDesignPatternShowCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLMediatorDesignPatternShowCase.h; sourceTree = "<group>"; };
 		E5E0935B2490D27F00AC716B /* IDLMediatorDesignPatternShowCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLMediatorDesignPatternShowCase.m; sourceTree = "<group>"; };
+		E5F4F3092491049D00CA1653 /* IDLMemento.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IDLMemento.h; path = "Object-Design-Pattern/BehaviorDesignPatterns/Command/Client/IDLMemento.h"; sourceTree = SOURCE_ROOT; };
+		E5F4F30A2491049D00CA1653 /* IDLMemento.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IDLMemento.m; path = "Object-Design-Pattern/BehaviorDesignPatterns/Command/Client/IDLMemento.m"; sourceTree = SOURCE_ROOT; };
+		E5F4F30C2491062300CA1653 /* IDLOriginator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IDLOriginator.h; path = "Object-Design-Pattern/BehaviorDesignPatterns/Command/Client/IDLOriginator.h"; sourceTree = SOURCE_ROOT; };
+		E5F4F30D2491062300CA1653 /* IDLOriginator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IDLOriginator.m; path = "Object-Design-Pattern/BehaviorDesignPatterns/Command/Client/IDLOriginator.m"; sourceTree = SOURCE_ROOT; };
+		E5F4F30F2491077C00CA1653 /* IDLCareTaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IDLCareTaker.h; path = "Object-Design-Pattern/BehaviorDesignPatterns/Command/Client/IDLCareTaker.h"; sourceTree = SOURCE_ROOT; };
+		E5F4F3102491077C00CA1653 /* IDLCareTaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IDLCareTaker.m; path = "Object-Design-Pattern/BehaviorDesignPatterns/Command/Client/IDLCareTaker.m"; sourceTree = SOURCE_ROOT; };
+		E5F4F3132491095C00CA1653 /* IDLMementoDesignPatternShowCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLMementoDesignPatternShowCase.h; sourceTree = "<group>"; };
+		E5F4F3142491095C00CA1653 /* IDLMementoDesignPatternShowCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLMementoDesignPatternShowCase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -698,6 +710,13 @@
 		DAEA2582248C061700547291 /* Memento */ = {
 			isa = PBXGroup;
 			children = (
+				E5F4F3122491093000CA1653 /* Client */,
+				E5F4F3092491049D00CA1653 /* IDLMemento.h */,
+				E5F4F30A2491049D00CA1653 /* IDLMemento.m */,
+				E5F4F30C2491062300CA1653 /* IDLOriginator.h */,
+				E5F4F30D2491062300CA1653 /* IDLOriginator.m */,
+				E5F4F30F2491077C00CA1653 /* IDLCareTaker.h */,
+				E5F4F3102491077C00CA1653 /* IDLCareTaker.m */,
 			);
 			path = Memento;
 			sourceTree = "<group>";
@@ -1439,6 +1458,15 @@
 			path = Client;
 			sourceTree = "<group>";
 		};
+		E5F4F3122491093000CA1653 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				E5F4F3132491095C00CA1653 /* IDLMementoDesignPatternShowCase.h */,
+				E5F4F3142491095C00CA1653 /* IDLMementoDesignPatternShowCase.m */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1518,6 +1546,7 @@
 				DA38AD3A248AC63A004A65D0 /* IDLBullet.m in Sources */,
 				E51114F4248346C600BDB836 /* IDLApplePCDeviceFactory.m in Sources */,
 				E5E0934E2490C83E00AC716B /* IDLMediator.m in Sources */,
+				E5F4F3152491095C00CA1653 /* IDLMementoDesignPatternShowCase.m in Sources */,
 				DAFCC840248B54D1003FD420 /* IDLHandler2.m in Sources */,
 				DAEA2569248BE79E00547291 /* IDLObserver.m in Sources */,
 				E51114D124833F9400BDB836 /* IDLDellPCKeyboard.m in Sources */,
@@ -1534,6 +1563,7 @@
 				E56CF4162490E14A002B2AC5 /* IDLCommandInvoker.m in Sources */,
 				E56CF41A2490E23E002B2AC5 /* IDLCommandDesignPatternShowCase.m in Sources */,
 				DAFCC83A248B519A003FD420 /* IDLHandler1.m in Sources */,
+				E5F4F30E2491062300CA1653 /* IDLOriginator.m in Sources */,
 				E5B745A024909FF100379FB7 /* IDLScaleCotext.m in Sources */,
 				E5E0935C2490D27F00AC716B /* IDLMediatorDesignPatternShowCase.m in Sources */,
 				E5B745A42490A10000379FB7 /* IDLStrategyDesignPatternShowCase.m in Sources */,
@@ -1554,6 +1584,7 @@
 				E54E480C24828BFE006B39C9 /* IDLIBMPCDevice.m in Sources */,
 				E51114D72483409F00BDB836 /* IDLDellHostDevice.m in Sources */,
 				E511150E2483754700BDB836 /* IDLHouseDirector.m in Sources */,
+				E5F4F3112491077C00CA1653 /* IDLCareTaker.m in Sources */,
 				DAFCC84C248B550E003FD420 /* IDLDefaultHandler.m in Sources */,
 				E51114E22483418F00BDB836 /* IDLAppleKeyboard.m in Sources */,
 				DAFCC846248B54ED003FD420 /* IDLHandler4.m in Sources */,
@@ -1587,6 +1618,7 @@
 				DA2606522486BD8600E128D0 /* IDLFacade.m in Sources */,
 				E51115082483713F00BDB836 /* IDLSimpleHouseBuilder.m in Sources */,
 				E54E47EC248288F3006B39C9 /* SceneDelegate.m in Sources */,
+				E5F4F30B2491049D00CA1653 /* IDLMemento.m in Sources */,
 				DAFC69F324880FA600131D03 /* IDLDevice.m in Sources */,
 				E51114E5248341E200BDB836 /* IDLApplePCMemery.m in Sources */,
 				DAFC69F924880FCB00131D03 /* IDLTVDevice.m in Sources */,
