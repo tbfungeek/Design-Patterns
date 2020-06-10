@@ -61,6 +61,9 @@
 //State Design Pattern
 #import "IDLStateDesignPatternShowCase.h"
 
+//Stategry Design Pattern
+#import "IDLStrategyDesignPatternShowCase.h"
+
 @interface ViewController ()
 
 @end
@@ -121,6 +124,10 @@
     
     IDLStateDesignPatternShowCase *stateDesignPatternShowCase = [IDLStateDesignPatternShowCase new];
     [stateDesignPatternShowCase showCase];
+    
+    IDLStrategyDesignPatternShowCase *stategryDesignPatternShowCase = [IDLStrategyDesignPatternShowCase new];
+    
+    [stategryDesignPatternShowCase showCase];
     
 }
 

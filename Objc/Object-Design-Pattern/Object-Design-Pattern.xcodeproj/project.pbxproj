@@ -102,6 +102,10 @@
 		E54E481524828E1B006B39C9 /* IDLBasePCFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E54E481424828E1B006B39C9 /* IDLBasePCFactory.m */; };
 		E54E481824828ED0006B39C9 /* IDLIBMPCFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E54E481724828ED0006B39C9 /* IDLIBMPCFactory.m */; };
 		E54E481F24828FDF006B39C9 /* IDLFactoryDesignPatternShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E54E481E24828FDF006B39C9 /* IDLFactoryDesignPatternShowCase.m */; };
+		E5B7459924909FA400379FB7 /* IDLScaleDiscountStategryA.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7459524909FA300379FB7 /* IDLScaleDiscountStategryA.m */; };
+		E5B7459A24909FA400379FB7 /* IDLScaleDiscountStategryB.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7459724909FA300379FB7 /* IDLScaleDiscountStategryB.m */; };
+		E5B745A024909FF100379FB7 /* IDLScaleCotext.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7459F24909FF100379FB7 /* IDLScaleCotext.m */; };
+		E5B745A42490A10000379FB7 /* IDLStrategyDesignPatternShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B745A32490A10000379FB7 /* IDLStrategyDesignPatternShowCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -312,6 +316,15 @@
 		E54E481D24828FDF006B39C9 /* IDLFactoryDesignPatternShowCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLFactoryDesignPatternShowCase.h; sourceTree = "<group>"; };
 		E54E481E24828FDF006B39C9 /* IDLFactoryDesignPatternShowCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLFactoryDesignPatternShowCase.m; sourceTree = "<group>"; };
 		E54E48202482900B006B39C9 /* IDLDesignPatternShowCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLDesignPatternShowCase.h; sourceTree = "<group>"; };
+		E5B7459524909FA300379FB7 /* IDLScaleDiscountStategryA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDLScaleDiscountStategryA.m; sourceTree = "<group>"; };
+		E5B7459624909FA300379FB7 /* IDLScaleDiscountStategryA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDLScaleDiscountStategryA.h; sourceTree = "<group>"; };
+		E5B7459724909FA300379FB7 /* IDLScaleDiscountStategryB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDLScaleDiscountStategryB.m; sourceTree = "<group>"; };
+		E5B7459824909FA300379FB7 /* IDLScaleDiscountStategryB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDLScaleDiscountStategryB.h; sourceTree = "<group>"; };
+		E5B7459C24909FC000379FB7 /* IDLScaleStategryProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLScaleStategryProtocol.h; sourceTree = "<group>"; };
+		E5B7459E24909FF100379FB7 /* IDLScaleCotext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLScaleCotext.h; sourceTree = "<group>"; };
+		E5B7459F24909FF100379FB7 /* IDLScaleCotext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLScaleCotext.m; sourceTree = "<group>"; };
+		E5B745A22490A10000379FB7 /* IDLStrategyDesignPatternShowCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLStrategyDesignPatternShowCase.h; sourceTree = "<group>"; };
+		E5B745A32490A10000379FB7 /* IDLStrategyDesignPatternShowCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLStrategyDesignPatternShowCase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -492,7 +505,7 @@
 				DAEA2582248C061700547291 /* Memento */,
 				DAEA2581248C060A00547291 /* Mediator */,
 				DAEA2580248C05ED00547291 /* State */,
-				DAEA257F248C059700547291 /* Strategy */,
+				E5B7458224909C5900379FB7 /* Strategy */,
 				DAEA257E248C058800547291 /* Visitor */,
 				DAEA256F248BFC9800547291 /* Templete */,
 				DAEF56BD248B603B001D0795 /* Observer */,
@@ -626,13 +639,6 @@
 				DAEA2586248E8D7700547291 /* Protocols */,
 			);
 			path = Visitor;
-			sourceTree = "<group>";
-		};
-		DAEA257F248C059700547291 /* Strategy */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Strategy;
 			sourceTree = "<group>";
 		};
 		DAEA2580248C05ED00547291 /* State */ = {
@@ -1258,6 +1264,55 @@
 			path = Client;
 			sourceTree = "<group>";
 		};
+		E5B7458224909C5900379FB7 /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				E5B745A12490A0DB00379FB7 /* Client */,
+				E5B7459D24909FD800379FB7 /* Context */,
+				E5B7458C24909F2400379FB7 /* Strategies */,
+			);
+			name = Strategy;
+			path = Strategy/Strategy;
+			sourceTree = "<group>";
+		};
+		E5B7458C24909F2400379FB7 /* Strategies */ = {
+			isa = PBXGroup;
+			children = (
+				E5B7459B24909FB100379FB7 /* Protocol */,
+				E5B7459624909FA300379FB7 /* IDLScaleDiscountStategryA.h */,
+				E5B7459524909FA300379FB7 /* IDLScaleDiscountStategryA.m */,
+				E5B7459824909FA300379FB7 /* IDLScaleDiscountStategryB.h */,
+				E5B7459724909FA300379FB7 /* IDLScaleDiscountStategryB.m */,
+			);
+			path = Strategies;
+			sourceTree = "<group>";
+		};
+		E5B7459B24909FB100379FB7 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				E5B7459C24909FC000379FB7 /* IDLScaleStategryProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		E5B7459D24909FD800379FB7 /* Context */ = {
+			isa = PBXGroup;
+			children = (
+				E5B7459E24909FF100379FB7 /* IDLScaleCotext.h */,
+				E5B7459F24909FF100379FB7 /* IDLScaleCotext.m */,
+			);
+			path = Context;
+			sourceTree = "<group>";
+		};
+		E5B745A12490A0DB00379FB7 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				E5B745A22490A10000379FB7 /* IDLStrategyDesignPatternShowCase.h */,
+				E5B745A32490A10000379FB7 /* IDLStrategyDesignPatternShowCase.m */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1349,6 +1404,8 @@
 				DAEA259D248E99E900547291 /* IDLVisitorIDLDesignPatternShowCase.m in Sources */,
 				E51114E82483423300BDB836 /* IDLAppleHostDevice.m in Sources */,
 				DAFCC83A248B519A003FD420 /* IDLHandler1.m in Sources */,
+				E5B745A024909FF100379FB7 /* IDLScaleCotext.m in Sources */,
+				E5B745A42490A10000379FB7 /* IDLStrategyDesignPatternShowCase.m in Sources */,
 				DAEA2576248BFDCF00547291 /* IDLTempleteOne.m in Sources */,
 				DA5FE99E2488811F00154D9F /* IDLBasicGoods.m in Sources */,
 				DA26063E2485D6FC00E128D0 /* IDLComplexObject.m in Sources */,
@@ -1381,7 +1438,9 @@
 				E50A8BA62487D6BD00B8D92D /* IDLFileDataSource.m in Sources */,
 				DA2606422485D86100E128D0 /* IDLPrototypeDesignPatternShowCase.m in Sources */,
 				E50A8B5A248643BE00B8D92D /* IDLSingletonObject.m in Sources */,
+				E5B7459924909FA400379FB7 /* IDLScaleDiscountStategryA.m in Sources */,
 				DAFC69F024880F9400131D03 /* IDLRemote.m in Sources */,
+				E5B7459A24909FA400379FB7 /* IDLScaleDiscountStategryB.m in Sources */,
 				E50A8B722487429800B8D92D /* IDLRealSubject.m in Sources */,
 				DAFCC837248B5084003FD420 /* IDLRequest.m in Sources */,
 				E50A8B6F24865CCC00B8D92D /* IDLAdapterDesignPatternShowCase.m in Sources */,
