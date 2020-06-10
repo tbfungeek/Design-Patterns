@@ -1725,6 +1725,69 @@ context.request1()
 context.request2()
 
 
+/**
+ 
+ Strategy Design Pattern
+ 
+*/
+
+protocol StategyProtocol {
+    func excuteSalePriceStategy(originePrice:Int) -> Float
+}
+
+class SaleStategyA:StategyProtocol {
+    
+    var scale:Float = 0.8
+    
+    init(scale:Float) {
+        self.scale = scale
+    }
+    
+    func excuteSalePriceStategy(originePrice: Int) -> Float {
+        return Float(originePrice) * self.scale
+    }
+}
+
+class SaleStategyB:StategyProtocol {
+    
+    var discount: Int = 50
+    init(discount: Int) {
+        self.discount = discount
+    }
+    
+    func excuteSalePriceStategy(originePrice: Int) -> Float {
+        return Float(originePrice - self.discount)
+    }
+}
+
+class ScaleContext {
+    
+    var stategy:StategyProtocol?
+    
+    func applyStategy(stategy:StategyProtocol) {
+        self.stategy = stategy
+    }
+    
+    func priceAfterScale(originePrice: Int) -> Float {
+        return Float(self.stategy?.excuteSalePriceStategy(originePrice: originePrice) ?? Float(originePrice))
+    }
+}
+
+let scaleStategyA:SaleStategyA = SaleStategyA(scale: 0.95)
+let scaleStategyB:SaleStategyB =  SaleStategyB(discount: 90)
+
+let scaleContext = ScaleContext()
+
+scaleContext.applyStategy(stategy: scaleStategyA)
+print("price ofter scale Stategy A = \(scaleContext.priceAfterScale(originePrice: 200))")
+
+scaleContext.applyStategy(stategy: scaleStategyB)
+print("price ofter scale Stategy A = \(scaleContext.priceAfterScale(originePrice: 200))")
+
+
+
+
+
 
 
 
