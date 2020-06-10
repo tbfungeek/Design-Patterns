@@ -27,6 +27,9 @@
 		DA5FE99E2488811F00154D9F /* IDLBasicGoods.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5FE99D2488811F00154D9F /* IDLBasicGoods.m */; };
 		DA5FE9A1248881CD00154D9F /* IDLGoodPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5FE9A0248881CD00154D9F /* IDLGoodPackage.m */; };
 		DA5FE9A52488834700154D9F /* IDLCompositeDesignPatternShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5FE9A42488834700154D9F /* IDLCompositeDesignPatternShowCase.m */; };
+		DAAE505F249142AB00A01BCE /* IDLArrayCollectionWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAE505E249142AB00A01BCE /* IDLArrayCollectionWrapper.m */; };
+		DAAE50622491455C00A01BCE /* IDLIterator.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAE50612491455C00A01BCE /* IDLIterator.m */; };
+		DAAE50662491477B00A01BCE /* IDLIteratorDesignPatternShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAE50652491477B00A01BCE /* IDLIteratorDesignPatternShowCase.m */; };
 		DAD2480F248FE96D006F62BD /* IDLBaseState.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD2480E248FE96D006F62BD /* IDLBaseState.m */; };
 		DAD24814248FECF7006F62BD /* IDLStateDesignPatternShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD24813248FECF7006F62BD /* IDLStateDesignPatternShowCase.m */; };
 		DAEA2566248BE78D00547291 /* IDLSubscribe.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEA2565248BE78D00547291 /* IDLSubscribe.m */; };
@@ -169,6 +172,14 @@
 		DA5FE9A0248881CD00154D9F /* IDLGoodPackage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLGoodPackage.m; sourceTree = "<group>"; };
 		DA5FE9A32488834700154D9F /* IDLCompositeDesignPatternShowCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLCompositeDesignPatternShowCase.h; sourceTree = "<group>"; };
 		DA5FE9A42488834700154D9F /* IDLCompositeDesignPatternShowCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLCompositeDesignPatternShowCase.m; sourceTree = "<group>"; };
+		DAAE505824913E3F00A01BCE /* IDLIteratorProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLIteratorProtocol.h; sourceTree = "<group>"; };
+		DAAE505924913F4600A01BCE /* IDLCollectionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLCollectionProtocol.h; sourceTree = "<group>"; };
+		DAAE505D249142AB00A01BCE /* IDLArrayCollectionWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLArrayCollectionWrapper.h; sourceTree = "<group>"; };
+		DAAE505E249142AB00A01BCE /* IDLArrayCollectionWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLArrayCollectionWrapper.m; sourceTree = "<group>"; };
+		DAAE50602491455C00A01BCE /* IDLIterator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLIterator.h; sourceTree = "<group>"; };
+		DAAE50612491455C00A01BCE /* IDLIterator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLIterator.m; sourceTree = "<group>"; };
+		DAAE50642491477B00A01BCE /* IDLIteratorDesignPatternShowCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLIteratorDesignPatternShowCase.h; sourceTree = "<group>"; };
+		DAAE50652491477B00A01BCE /* IDLIteratorDesignPatternShowCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLIteratorDesignPatternShowCase.m; sourceTree = "<group>"; };
 		DAD2480D248FE96D006F62BD /* IDLBaseState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLBaseState.h; sourceTree = "<group>"; };
 		DAD2480E248FE96D006F62BD /* IDLBaseState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDLBaseState.m; sourceTree = "<group>"; };
 		DAD24812248FECF7006F62BD /* IDLStateDesignPatternShowCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDLStateDesignPatternShowCase.h; sourceTree = "<group>"; };
@@ -616,6 +627,35 @@
 			path = Client;
 			sourceTree = "<group>";
 		};
+		DAAE505524913D2700A01BCE /* Iterator */ = {
+			isa = PBXGroup;
+			children = (
+				DAAE505824913E3F00A01BCE /* IDLIteratorProtocol.h */,
+				DAAE50602491455C00A01BCE /* IDLIterator.h */,
+				DAAE50612491455C00A01BCE /* IDLIterator.m */,
+			);
+			path = Iterator;
+			sourceTree = "<group>";
+		};
+		DAAE505624913D3A00A01BCE /* CollectionWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				DAAE505924913F4600A01BCE /* IDLCollectionProtocol.h */,
+				DAAE505D249142AB00A01BCE /* IDLArrayCollectionWrapper.h */,
+				DAAE505E249142AB00A01BCE /* IDLArrayCollectionWrapper.m */,
+			);
+			path = CollectionWrapper;
+			sourceTree = "<group>";
+		};
+		DAAE50632491472D00A01BCE /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				DAAE50642491477B00A01BCE /* IDLIteratorDesignPatternShowCase.h */,
+				DAAE50652491477B00A01BCE /* IDLIteratorDesignPatternShowCase.m */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
 		DAD24810248FE972006F62BD /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -735,6 +775,9 @@
 		DAEA2584248C063400547291 /* Iterator */ = {
 			isa = PBXGroup;
 			children = (
+				DAAE50632491472D00A01BCE /* Client */,
+				DAAE505624913D3A00A01BCE /* CollectionWrapper */,
+				DAAE505524913D2700A01BCE /* Iterator */,
 			);
 			path = Iterator;
 			sourceTree = "<group>";
@@ -1564,6 +1607,7 @@
 				E56CF41A2490E23E002B2AC5 /* IDLCommandDesignPatternShowCase.m in Sources */,
 				DAFCC83A248B519A003FD420 /* IDLHandler1.m in Sources */,
 				E5F4F30E2491062300CA1653 /* IDLOriginator.m in Sources */,
+				DAAE50622491455C00A01BCE /* IDLIterator.m in Sources */,
 				E5B745A024909FF100379FB7 /* IDLScaleCotext.m in Sources */,
 				E5E0935C2490D27F00AC716B /* IDLMediatorDesignPatternShowCase.m in Sources */,
 				E5B745A42490A10000379FB7 /* IDLStrategyDesignPatternShowCase.m in Sources */,
@@ -1601,9 +1645,11 @@
 				E54E47FA248288F9006B39C9 /* main.m in Sources */,
 				E50A8BB12487DBC000B8D92D /* IDLWrapperDesignPatternShowCase.m in Sources */,
 				E50A8BAD2487D9D600B8D92D /* IDLCompressionDataWrapper.m in Sources */,
+				DAAE50662491477B00A01BCE /* IDLIteratorDesignPatternShowCase.m in Sources */,
 				E50A8BA62487D6BD00B8D92D /* IDLFileDataSource.m in Sources */,
 				DA2606422485D86100E128D0 /* IDLPrototypeDesignPatternShowCase.m in Sources */,
 				E50A8B5A248643BE00B8D92D /* IDLSingletonObject.m in Sources */,
+				DAAE505F249142AB00A01BCE /* IDLArrayCollectionWrapper.m in Sources */,
 				E56CF4102490DE03002B2AC5 /* IDLCommand.m in Sources */,
 				E5B7459924909FA400379FB7 /* IDLScaleDiscountStategryA.m in Sources */,
 				DAFC69F024880F9400131D03 /* IDLRemote.m in Sources */,

@@ -73,6 +73,9 @@
 //Memento Design Pattern
 #import "IDLMementoDesignPatternShowCase.h"
 
+//Iterator Design Pattern
+#import "IDLIteratorDesignPatternShowCase.h"
+
 @interface ViewController ()
 
 @end
@@ -146,6 +149,11 @@
     
     IDLMementoDesignPatternShowCase *mementoDesignPatternShowCase = [IDLMementoDesignPatternShowCase new];
     [mementoDesignPatternShowCase showCase];
+    
+    IDLIteratorDesignPatternShowCase *iteratorDesignPatternShowCase = [IDLIteratorDesignPatternShowCase new];
+    [iteratorDesignPatternShowCase showCase];
+    
+    NSLog(@"This is the End of Design Pattern but may be The beginning, But Please firmly believe that you will reach SomeWhere locate in your heart and dreams! Thank you");
     
 }
 
