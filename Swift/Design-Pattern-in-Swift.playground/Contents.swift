@@ -1886,4 +1886,82 @@ componentA.sendMessage(message: Message(message: "Message From componentA", targ
 componentB.sendMessage(message: Message(message: "Message From componentB", targetComponentName: componentA.componnetName()))
 
 
+/**
+ 
+ Command Design Pattern
+ 
+*/
+
+protocol CommandProtocol {
+    func excute()
+}
+
+class Receiver {
+    
+    func doWork(params:Array<String>) {
+        print("do Work With Parameter : ==>")
+        for param in params {
+            print("parameter : \(param)")
+        }
+    }
+}
+
+class Command: CommandProtocol {
+    
+    var receiver:Receiver?
+    var params:Array<String> = []
+    
+    init(receiver:Receiver,params:String...) {
+        self.receiver = receiver
+        for param in params {
+            self.params.append(param)
+        }
+    }
+    
+    func excute() {
+        receiver?.doWork(params: self.params)
+    }
+}
+
+class CommandInvoker {
+    
+    var commands:Array<CommandProtocol>
+    
+    init() {
+        self.commands = []
+    }
+    
+    func addCommand(command:Command) {
+        self.commands.append(command)
+    }
+    
+    func excute() {
+        for command in self.commands {
+            command.excute()
+        }
+    }
+}
+
+let invoker:CommandInvoker = CommandInvoker()
+
+
+let receiver:Receiver = Receiver()
+
+let command1:Command = Command(receiver: receiver, params: "Parameter1","Parameter2","Parameter3")
+
+let command2:Command = Command(receiver: receiver, params: "Param1","Param2","Param3")
+
+let command3:Command = Command(receiver: receiver, params: "P1","P2","P3")
+
+invoker.addCommand(command: command1)
+invoker.addCommand(command: command2)
+invoker.addCommand(command: command3)
+
+invoker.excute()
+
+
+
+
+
+
 
