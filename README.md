@@ -1,6 +1,6 @@
 # Design Pattern 设计模式
 
-### 设计模式总结
+![](./images/page0.png)
 
 #### 六大设计原则
 
