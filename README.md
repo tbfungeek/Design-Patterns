@@ -402,6 +402,9 @@ Facade 的方法本身并****不进行功能的处理，只是实现一个功能
 
 #### 前端常见架构模式
 
+- [透过现象看本质: 常见的前端架构风格和案例](https://juejin.im/post/5d7ffad551882545ff173083)
+- [iOS Architecture Patterns](https://medium.com/ios-os-x-development/ios-architecture-patterns-ecba4c38de52)
+
 ### 以往的总结内容
 
 - [Android进阶之设计模式](http://tbfungeek.github.io/tags/Android-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/)
