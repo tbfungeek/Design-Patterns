@@ -1960,6 +1960,90 @@ invoker.addCommand(command: command3)
 invoker.excute()
 
 
+/**
+ 
+ Memento Design Pattern
+ 
+*/
+
+class Originator {
+    
+    //私有变量，不对外发布，但是需要备份该数据
+    private var state:String
+    
+    init(state:String) {
+        self.state = state
+    }
+    
+    private func generateRandomString() -> String {
+        return String(UUID().uuidString.suffix(4))
+    }
+    
+    func doSomeWork() {
+        self.state = self.generateRandomString()
+    }
+    
+    func store() -> Memento {
+        return Memento(state: self.state)
+    }
+    
+    func restore(memento:Memento) {
+        self.state = memento.state
+    }
+    
+    func showState() -> String {
+        return self.state
+    }
+}
+
+
+class Memento {
+    
+    //private(set) 只有getter权限
+    private(set) var state:String
+    private(set) var date:Date
+    
+    init(state:String) {
+        self.state = state
+        self.date = Date()
+    }
+}
+
+class CareTaker {
+    
+    private var originater:Originator
+    
+    private var memenToList:Array<Memento>
+    
+    init(originater:Originator) {
+        self.originater = originater
+        self.memenToList = []
+    }
+    
+    func backup() {
+        memenToList.append(originater.store())
+    }
+    
+    func undo() {
+        originater.restore(memento: memenToList.removeLast())
+    }
+    
+    func showState() {
+        print(originater.showState())
+    }
+}
+
+let originator = Originator(state: "Init State")
+originator.showState()
+let careTaker = CareTaker(originater: originator)
+careTaker.backup()
+careTaker.showState()
+originator.doSomeWork()
+careTaker.showState()
+originator.doSomeWork()
+careTaker.showState()
+careTaker.undo()
+careTaker.showState()
 
 
 
