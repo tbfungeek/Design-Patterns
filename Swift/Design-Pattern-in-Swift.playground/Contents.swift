@@ -1785,11 +1785,105 @@ scaleContext.applyStategy(stategy: scaleStategyB)
 print("price ofter scale Stategy A = \(scaleContext.priceAfterScale(originePrice: 200))")
 
 
+/**
+ 
+ Mediator Design Pattern
+ 
+*/
 
+struct Message {
+    var message:String
+    var targetComponentName:String
+}
 
+protocol ComponentProtocol {
+    
+    func componnetName() -> String
+    
+    func updateMediator(mediator:Mediator)
+    
+    func onMessage(message:String)
+    
+    func sendMessage(message:Message)
+    
+}
 
+class BaseComponent: ComponentProtocol {
+    
+    private weak var mediator:Mediator?
+    
+    func componnetName() -> String {
+        return ""
+    }
+    
+    func updateMediator(mediator:Mediator) {
+        self.mediator = mediator
+    }
+    
+    func onMessage(message:String) {
+        
+    }
+    
+    func sendMessage(message:Message) {
+        self.mediator?.notify(message: message)
+    }
+}
 
+class ComponentA: BaseComponent {
 
+    override func componnetName() -> String {
+        return "ComponentA"
+    }
+    
+    override func onMessage(message: String) {
+        print("ComponentA  onMessage :\(message)")
+    }
+    
+}
+
+class ComponentB: BaseComponent {
+    
+    override func componnetName() -> String {
+        return "ComponentB"
+    }
+    
+    override func onMessage(message: String) {
+        print("ComponentB  onMessage :\(message)")
+    }
+}
+
+class Mediator {
+    
+    var components:[String:BaseComponent]
+    
+    init() {
+        self.components = [:]
+    }
+    
+    func registComponent(conponent:BaseComponent) {
+        
+        if(!conponent.componnetName().isEmpty) {
+            self.components[conponent.componnetName()] = conponent
+            conponent.updateMediator(mediator: self)
+        }
+
+    }
+    
+    func notify(message:Message) {
+        let component:ComponentProtocol? = self.components[message.targetComponentName]
+        component?.onMessage(message: message.message)
+    }
+}
+
+let mediator:Mediator = Mediator()
+let componentA:ComponentA = ComponentA()
+let componentB:ComponentB = ComponentB()
+
+mediator.registComponent(conponent: componentA)
+mediator.registComponent(conponent: componentB)
+
+componentA.sendMessage(message: Message(message: "Message From componentA", targetComponentName: componentB.componnetName()))
+componentB.sendMessage(message: Message(message: "Message From componentB", targetComponentName: componentA.componnetName()))
 
 
 
