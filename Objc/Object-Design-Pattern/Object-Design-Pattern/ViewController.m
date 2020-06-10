@@ -64,6 +64,9 @@
 //Stategry Design Pattern
 #import "IDLStrategyDesignPatternShowCase.h"
 
+//Mediator Design Pattern
+#import "IDLMediatorDesignPatternShowCase.h"
+
 @interface ViewController ()
 
 @end
@@ -128,6 +131,9 @@
     IDLStrategyDesignPatternShowCase *stategryDesignPatternShowCase = [IDLStrategyDesignPatternShowCase new];
     
     [stategryDesignPatternShowCase showCase];
+    
+    IDLMediatorDesignPatternShowCase *mediatorDesignPatternShowCase = [IDLMediatorDesignPatternShowCase new];
+    [mediatorDesignPatternShowCase showCase];
     
 }
 
