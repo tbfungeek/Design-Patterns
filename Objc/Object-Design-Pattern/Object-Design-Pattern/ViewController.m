@@ -67,6 +67,9 @@
 //Mediator Design Pattern
 #import "IDLMediatorDesignPatternShowCase.h"
 
+//Command Design Pattern
+#import "IDLCommandDesignPatternShowCase.h"
+
 @interface ViewController ()
 
 @end
@@ -134,6 +137,9 @@
     
     IDLMediatorDesignPatternShowCase *mediatorDesignPatternShowCase = [IDLMediatorDesignPatternShowCase new];
     [mediatorDesignPatternShowCase showCase];
+    
+    IDLCommandDesignPatternShowCase *commandDesignPatternShowCase = [IDLCommandDesignPatternShowCase new];
+    [commandDesignPatternShowCase showCase];
     
 }
 
